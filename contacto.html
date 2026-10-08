@@ -9,6 +9,7 @@
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen">
 
+    <!-- ENCABEZADO / MENÚ PRINCIPAL -->
     <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
             <div class="flex items-center gap-3 md:gap-4">
@@ -44,19 +45,21 @@
     </header>
 
     <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+        <!-- ENCABEZADO DE SECCIÓN -->
         <div class="text-center mb-14">
-            <h1 class="text-4xl font-extrabold text-white mb-3">Ponte en Contacto y Agenda tu Visita</h1>
-            <p class="text-zinc-400 max-w-2xl mx-auto">Te brindo asesoría profesional y personalizada para el trámite de tu crédito Infonavit, Fovissste o bancario sin costo.</p>
+            <h1 class="text-4xl font-extrabold text-white mb-3">Ponte en Contacto y Conoce tu Próximo Hogar</h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Te brindo asesoría profesional y personalizada para la precalificación y trámite de tu crédito Infonavit, Fovissste o bancario totalmente gratis.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+            <!-- TARJETA DE ASESOR Y DATOS DE CONTACTO -->
             <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-8">
                 <div class="flex items-center gap-5 pb-6 border-b border-zinc-800">
                     <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-20 h-20 rounded-full object-cover border-2 border-orange-500 shadow-lg">
                     <div>
                         <h2 class="text-2xl font-bold text-white">Alberto Jasso</h2>
                         <p class="text-orange-400 text-sm font-semibold uppercase tracking-wide">Asesor Patrimonial Certificado</p>
-                        <p class="text-zinc-400 text-xs mt-1">Atención directa e inmediata para Andalucía Residencial</p>
+                        <p class="text-zinc-400 text-xs mt-1">Atención personalizada y acompañamiento directo en Andalucía Residencial</p>
                     </div>
                 </div>
 
@@ -77,7 +80,7 @@
                         </div>
                         <div>
                             <p class="text-xs text-zinc-500 uppercase font-bold">Ubicación del Desarrollo</p>
-                            <p class="text-white text-sm font-medium">Tizayuca, Hidalgo (Zona de máxima plusvalía conectada con AIFA y Tren Suburbano)</p>
+                            <p class="text-white text-sm font-medium">Tizayuca, Hidalgo (Zona de gran plusvalía conectada con AIFA y Tren Suburbano)</p>
                         </div>
                     </div>
 
@@ -86,23 +89,28 @@
                             <i data-lucide="clock" class="w-5 h-5"></i>
                         </div>
                         <div>
-                            <p class="text-xs text-zinc-500 uppercase font-bold">Horario de Atención</p>
+                            <p class="text-xs text-zinc-500 uppercase font-bold">Horario de Recorridos Guiados</p>
                             <p class="text-white text-sm font-medium">Lunes a Domingo de 9:00 AM a 7:00 PM</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="pt-4 border-t border-zinc-800">
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20quiero%20agendar%20una%20visita%20a%20Andaluc%C3%ADa%20Residencial" target="_blank" class="w-full flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-black font-extrabold py-4 rounded-xl shadow-lg transition-all text-sm">
+                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20quiero%20agendar%20mi%20recorrido%20gratis%20a%20Andaluc%C3%ADa%20Residencial" target="_blank" class="w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-extrabold py-4 rounded-xl shadow-lg transition-all text-sm">
                         <i data-lucide="message-circle" class="w-5 h-5"></i>
-                        Enviar WhatsApp a Alberto Jasso
+                        Agendar por WhatsApp con Alberto Jasso
                     </a>
                 </div>
             </div>
 
-            <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
-                <h3 class="text-xl font-bold text-white mb-2">Solicita una Cotización o Cita</h3>
-                <p class="text-zinc-400 text-xs mb-6">Déjanos tus datos y me comunicaré a la brevedad para asesorarte.</p>
+            <!-- FORMULARIO ALTA CONVERSIÓN: RECORRIDO GRATIS -->
+            <div class="bg-zinc-900 rounded-2xl p-8 border border-orange-500/40 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-orange-500 text-black font-extrabold text-[10px] px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Sin Compromiso
+                </div>
+
+                <h3 class="text-2xl font-extrabold text-white mb-1">¡Agenda tu Recorrido VIP Gratis!</h3>
+                <p class="text-orange-400 text-xs font-medium mb-6">Conoce las casas muestra, la alberca y la casa club. Completa tus datos para recibir la ubicación exacta y apartar tu horario.</p>
 
                 <form action="https://formspree.io/f/xzzdbrze" method="POST" class="space-y-4">
                     <div>
@@ -128,35 +136,38 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-zinc-300 uppercase mb-1">Prototipo de Interés</label>
+                        <label class="block text-xs font-semibold text-zinc-300 uppercase mb-1">Modelo Favorito a Visitar</label>
                         <select name="modelo" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500">
-                            <option value="Álamo">Álamo ($1,373,000 MXN)</option>
-                            <option value="Aragón">Aragón ($1,525,000 MXN)</option>
-                            <option value="Tenerife">Tenerife ($1,826,000 MXN)</option>
-                            <option value="Cáceres">Cáceres ($2,179,000 MXN)</option>
-                            <option value="Por Asesorar">Requiero orientación</option>
+                            <option value="Álamo">Prototipo Álamo ($1,373,000 MXN)</option>
+                            <option value="Aragón">Prototipo Aragón ($1,525,000 MXN)</option>
+                            <option value="Tenerife">Prototipo Tenerife ($1,826,000 MXN)</option>
+                            <option value="Cáceres">Prototipo Cáceres ($2,179,000 MXN)</option>
+                            <option value="Todos los modelos">Quiero conocer todos los modelos</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-zinc-300 uppercase mb-1">Mensaje o Comentarios</label>
-                        <textarea name="mensaje" rows="3" placeholder="¿Cuándo te gustaría agendar tu visita o qué dudas tienes?" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500"></textarea>
+                        <label class="block text-xs font-semibold text-zinc-300 uppercase mb-1">Día Preferido de Visita</label>
+                        <input type="text" name="dia_preferido" placeholder="Ej. Este Sábado a las 11 AM" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500">
                     </div>
 
-                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-black font-extrabold py-3.5 rounded-xl transition-all text-sm shadow">
-                        Enviar Solicitud
+                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-black font-extrabold py-4 rounded-xl transition-all text-sm shadow-xl flex items-center justify-center gap-2">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                        ¡Reservar mi Recorrido Gratis!
                     </button>
                 </form>
             </div>
         </div>
 
+        <!-- SECCIÓN COMPLETA DE VENTAJAS DE UBICACIÓN Y PLUSVALÍA -->
         <div class="mt-20 border-t border-zinc-800 pt-16">
             <div class="text-center mb-12">
                 <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Ubicación Estratégica y Plusvalía</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-3">¿Por qué invertir y vivir en Tizayuca?</h2>
-                <p class="text-zinc-400 max-w-3xl mx-auto text-sm">Tizayuca se posiciona como el nuevo núcleo logístico, turístico e industrial del Valle de México, garantizando conectividad masiva y crecimiento exponencial para tu patrimonio.</p>
+                <p class="text-zinc-400 max-w-3xl mx-auto text-sm">Tizayuca se posiciona como el nuevo polo logístico, turístico e industrial del Valle de México, garantizando conectividad masiva y crecimiento exponencial para tu patrimonio.</p>
             </div>
 
+            <!-- TARJETA DESTACADA: PRÓXIMA ESTACIÓN TREN SUBURBANO -->
             <div class="bg-gradient-to-r from-orange-500/20 via-zinc-900 to-zinc-900 border border-orange-500/50 rounded-2xl p-8 mb-8 relative overflow-hidden shadow-2xl">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
                     <div class="flex items-center gap-5">
@@ -178,4 +189,91 @@
                 </div>
             </div>
 
-            <div class="grid grid-
+            <!-- TARJETAS DE VENTAJAS REGIONALES -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <!-- Polo Zapotlán -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-4">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Polo de Desarrollo Zapotlán</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Cercanía inmediata al nuevo parque industrial y nodo de desarrollo tecnológico de Zapotlán de Juárez, impulsando empleo y plusvalía.</p>
+                </div>
+
+                <!-- Arco Norte -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-4">
+                        <i data-lucide="milestone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Salidas Rápidas por Arco Norte</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Acceso ágil a la autopista Arco Norte para conectar rápidamente con Puebla, Tlaxcala, Querétaro y la zona poniente sin tráfico urbano.</p>
+                </div>
+
+                <!-- Corredor de la Montaña -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-4">
+                        <i data-lucide="mountain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Ruta de la Montaña</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">A pocos minutos del Corredor Turístico: Huasca de Ocampo, Mineral del Monte y Real del Monte para disfrutar de la naturaleza en familia.</p>
+                </div>
+
+                <!-- AIFA -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-4">
+                        <i data-lucide="plane" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Cercanía al AIFA</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Ubicado a tan solo 15-20 minutos del Aeropuerto Internacional Felipe Ángeles, convirtiéndose en el epicentro habitacional del área.</p>
+                </div>
+
+            </div>
+
+            <!-- TIEMPOS Y PUNTOS CLAVE -->
+            <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-8">
+                <h3 class="text-xl font-bold text-white mb-6 text-center">Tiempos Aprox. a Destinos Clave</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="text-xl font-extrabold text-orange-500 block mb-1">En Minutos</span>
+                        <span class="text-xs font-semibold text-white block">Estación Tizayuca</span>
+                        <span class="text-[10px] text-zinc-500">Tren Suburbano</span>
+                    </div>
+
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="text-xl font-extrabold text-orange-500 block mb-1">10 min</span>
+                        <span class="text-xs font-semibold text-white block">Polo Zapotlán</span>
+                        <span class="text-[10px] text-zinc-500">Zona Industrial</span>
+                    </div>
+
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="text-xl font-extrabold text-orange-500 block mb-1">15 min</span>
+                        <span class="text-xs font-semibold text-white block">AIFA / Arco Norte</span>
+                        <span class="text-[10px] text-zinc-500">Aeropuerto / Autopista</span>
+                    </div>
+
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="text-xl font-extrabold text-orange-500 block mb-1">30 min</span>
+                        <span class="text-xs font-semibold text-white block">Pachuca</span>
+                        <span class="text-[10px] text-zinc-500">Capital de Hidalgo</span>
+                    </div>
+
+                    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                        <span class="text-xl font-extrabold text-orange-500 block mb-1">45 min</span>
+                        <span class="text-xs font-semibold text-white block">Pueblos Mágicos</span>
+                        <span class="text-[10px] text-zinc-500">Mineral del Monte / Huasca</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-500 py-6 border-t border-zinc-800 text-xs text-center">
+        <p>© 2026 Andalucía Residencial — Tu Casa Tu Patrimonio. Atendido por Alberto Jasso, Asesor Certificado.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
