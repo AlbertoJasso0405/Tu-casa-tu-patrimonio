@@ -10,20 +10,16 @@
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen">
 
-    <!-- ENCABEZADO / MENÚ PRINCIPAL CON DOS LOGOS OFICIALES Y FOTO DE ASESOR -->
+    <!-- ENCABEZADO / MENÚ PRINCIPAL -->
     <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
             
             <!-- LOGOTIPOS OFICIALES -->
             <div class="flex items-center gap-3 md:gap-4">
-                <!-- Logo 1: Andalucía Residencial -->
                 <a href="index.html" class="flex items-center">
                     <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-10 sm:h-12 w-auto object-contain">
                 </a>
-                
                 <span class="w-px h-8 bg-zinc-800"></span>
-                
-                <!-- Logo 2: Tu Casa Tu Patrimonio -->
                 <a href="index.html" class="flex items-center">
                     <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
                 </a>
@@ -34,6 +30,7 @@
                 <a href="index.html" class="text-orange-500 font-bold">Inicio</a>
                 <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
                 <a href="galeria.html" class="hover:text-orange-400 transition-colors">Galería</a>
+                <a href="creditos.html" class="hover:text-orange-400 transition-colors">Créditos</a>
                 <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
 
@@ -56,13 +53,11 @@
     </header>
 
     <main class="flex-grow">
-        <!-- HERO CON FOTO DE PORTADA Y TARJETA DEL ASESOR -->
+        <!-- HERO CON PORTADA -->
         <section class="relative py-20 px-6 border-b border-zinc-800 bg-cover bg-center overflow-hidden" style="background-image: url('imagenes/hero.jpeg');">
-            <!-- Capa oscura para garantizar legibilidad -->
             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/70"></div>
 
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-                
                 <div class="lg:col-span-8 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-500/40 px-4 py-1.5 rounded-full text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
                         <i data-lucide="award" class="w-4 h-4 text-orange-500"></i>
@@ -71,7 +66,7 @@
                     
                     <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white drop-shadow-md">Conoce la casa de tus sueños en Andalucía</h1>
                     <p class="text-zinc-200 text-lg max-w-2xl mb-8 drop-shadow">
-                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club. Te acompaño personalmente paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
+                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club. Te acompaño personally paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
                     </p>
                     
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -84,7 +79,7 @@
                     </div>
                 </div>
 
-                <!-- TARJETA VISUAL DE PRESENTACIÓN DEL ASESOR -->
+                <!-- TARJETA DEL ASESOR -->
                 <div class="lg:col-span-4 flex justify-center">
                     <div class="bg-zinc-900/90 backdrop-blur-md border border-orange-500/40 rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl relative overflow-hidden">
                         <div class="absolute top-0 right-0 bg-orange-500 text-black font-bold text-[10px] px-3 py-1 rounded-bl-xl uppercase tracking-wider">
@@ -105,7 +100,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -122,6 +116,7 @@
                     <div>
                         <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Recámaras</span>
                         <h3 class="text-2xl font-bold text-white mt-4">ÁLAMO</h3>
+                        <p class="text-orange-400 text-xs font-bold my-1">$1,373,000 MXN</p>
                         <p class="text-zinc-500 text-xs mb-4">Const.: 58.30 m² | Lote: 67.50 m²</p>
                         <p class="text-zinc-300 text-sm mb-4">1 ½ Baños, sala, comedor, cocina y balcón.</p>
                     </div>
@@ -133,6 +128,7 @@
                     <div>
                         <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Rec. + Estancia</span>
                         <h3 class="text-2xl font-bold text-white mt-4">ARAGÓN</h3>
+                        <p class="text-orange-400 text-xs font-bold my-1">$1,525,000 MXN</p>
                         <p class="text-zinc-500 text-xs mb-4">Const.: 69.35 m² | Lote: 67.50 m²</p>
                         <p class="text-zinc-300 text-sm mb-4">Estancia de TV y proyecto de ampliación.</p>
                     </div>
@@ -144,6 +140,7 @@
                     <div>
                         <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">3 Recámaras</span>
                         <h3 class="text-2xl font-bold text-white mt-4">TENERIFE</h3>
+                        <p class="text-orange-400 text-xs font-bold my-1">$1,826,000 MXN</p>
                         <p class="text-zinc-500 text-xs mb-4">Const.: 78.65 m² | Lote: 90.00 m²</p>
                         <p class="text-zinc-300 text-sm mb-4">Espacios amplios con opción a ampliación.</p>
                     </div>
@@ -155,6 +152,7 @@
                     <div>
                         <span class="bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">3 Rec. Premium</span>
                         <h3 class="text-2xl font-bold text-white mt-4">CÁCERES</h3>
+                        <p class="text-orange-400 text-xs font-bold my-1">$2,179,000 MXN</p>
                         <p class="text-zinc-500 text-xs mb-4">Const.: 97.59 m² | Lote: 90.00 m²</p>
                         <p class="text-zinc-300 text-sm mb-4">2 ½ Baños, recámara principal con vestidor.</p>
                     </div>
