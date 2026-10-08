@@ -7,11 +7,31 @@
     <meta name="description" content="Casas en privada con alberca, balcón y casa club en Tizayuca, Hidalgo. Consulta disponibilidad con un Asesor Certificado de Andalucía Residencial.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-whatsapp {
+            animation: pulse-subtle 2s infinite ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-black text-slate-100 flex flex-col min-h-screen">
+<body class="bg-black text-slate-100 flex flex-col min-h-screen relative">
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP (SIEMPRE VISIBLE EN CELULAR Y PC) -->
+    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Andaluc%C3%ADa%20Residencial" 
+       target="_blank" 
+       aria-label="Contactar por WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3.5 sm:p-4 rounded-full shadow-2xl flex items-center gap-2.5 animate-whatsapp border-2 border-white/20 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="hidden sm:inline font-bold text-xs">¿Dudas? WhatsApp Directo</span>
+    </a>
 
     <!-- ENCABEZADO / MENÚ PRINCIPAL -->
-    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
+    <header class="bg-black text-white sticky top-0 z-40 border-b border-zinc-800 shadow-md py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
             
             <!-- LOGOTIPOS OFICIALES -->
@@ -34,24 +54,24 @@
                 <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
 
-            <!-- CONTROLES DERECHA: ASESOR + BOTÓN MENÚ MÓVIL -->
+            <!-- CONTROLES DERECHA: ASESOR CON ENLACE A CONTACTO + MENÚ MÓVIL -->
             <div class="flex items-center gap-2 sm:gap-3">
-                <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 pl-1.5 pr-2.5 py-1 rounded-full">
-                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-orange-500">
+                <a href="contacto.html" title="Contactar a Alberto Jasso" class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 hover:border-orange-500/60 pl-1.5 pr-3 py-1 rounded-full transition-all group">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-orange-500 group-hover:scale-105 transition-transform">
                     <div class="flex flex-col text-left hidden sm:flex">
-                        <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
+                        <span class="text-xs font-bold text-white leading-tight group-hover:text-orange-400 transition-colors">Alberto Jasso</span>
                         <span class="text-[8px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
                     </div>
-                </div>
+                </a>
 
-                <!-- BOTÓN MENÚ HAMBURGUESA PARA CELULARES -->
+                <!-- BOTÓN HAMBURGUESA PARA CELULARES -->
                 <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-orange-400 focus:outline-none">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
-        <!-- MENÚ DESPLEGABLE MÓVIL (PANTALLAS PEQUEÑAS) -->
+        <!-- MENÚ DESPLEGABLE MÓVIL -->
         <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-4 space-y-3 text-sm font-medium">
             <a href="index.html" class="block text-orange-500 font-bold py-1">Inicio</a>
             <a href="modelos.html" class="block text-zinc-300 hover:text-orange-400 py-1">Modelos</a>
@@ -88,34 +108,35 @@
                     </div>
                 </div>
 
-                <!-- TARJETA DEL ASESOR -->
+                <!-- TARJETA DEL ASESOR CON ENLACE DIRECTO A CONTACTO -->
                 <div class="lg:col-span-4 flex justify-center">
-                    <div class="bg-zinc-900/90 backdrop-blur-md border border-orange-500/40 rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl relative overflow-hidden">
+                    <a href="contacto.html" class="bg-zinc-900/90 backdrop-blur-md border border-orange-500/40 hover:border-orange-500 rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl relative overflow-hidden transition-all group block">
                         <div class="absolute top-0 right-0 bg-orange-500 text-black font-bold text-[10px] px-3 py-1 rounded-bl-xl uppercase tracking-wider">
                             Atención Directa
                         </div>
                         
-                        <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
+                        <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform">
                         
-                        <h3 class="text-xl font-bold text-white mb-1">Alberto Jasso</h3>
+                        <h3 class="text-xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">Alberto Jasso</h3>
                         <p class="text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Asesor Certificado de Ventas</p>
                         <p class="text-zinc-300 text-xs mb-6 leading-relaxed">
                             "Mi compromiso es ayudarte a elegir el mejor prototipo para tu familia y asegurar la aprobación de tu crédito patrimonial."
                         </p>
                         
-                        <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20quisiera%20asesor%C3%ADa%20personalizada%20sobre%20Andaluc%C3%ADa%20Residencial" target="_blank" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-full text-xs transition-all">
+                        <span class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-full text-xs transition-all">
                             <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            Contactar por WhatsApp
-                        </a>
-                    </div>
+                            Agendar Recorrido por WhatsApp
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- RESUMEN MODELOS -->
-        <section class="py-16 max-w-7xl mx-auto px-6">
+        <section class="py-16 max-w-7xl mx-auto px-6 border-b border-zinc-800">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-2">Prototipos Disponibles</h2>
+                <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Modelos Residenciales</span>
+                <h2 class="text-3xl font-bold text-white mt-3 mb-2">Prototipos Disponibles</h2>
                 <p class="text-zinc-400 text-sm">Modelos de 2 y 3 recámaras diseñados para cada estilo de vida.</p>
             </div>
             
@@ -167,6 +188,90 @@
                     </div>
                     <a href="modelos.html" class="text-orange-500 font-semibold text-sm hover:underline flex items-center gap-1">Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN DE GALERÍA DIRECTA EN LA PÁGINA PRINCIPAL -->
+        <section class="py-16 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Amenidades Exclusivas</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3 mb-2">Conoce las Instalaciones de Andalucía</h2>
+                <p class="text-zinc-400 text-sm max-w-xl mx-auto">Disfruta de espacios diseñados para la tranquilidad y diversión de toda tu familia dentro del desarrollo.</p>
+            </div>
+
+            <!-- CUADRÍCULA DE FOTOS REALES -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Alberca -->
+                <a href="galeria.html" class="group bg-zinc-900 rounded-2xl h-60 overflow-hidden relative border border-zinc-800">
+                    <img src="imagenes/alberca.jpg" onerror="this.src='imagenes/alberca.jpeg'" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider block">Amenidad Principal</span>
+                            <span class="text-white font-bold text-lg">Alberca Residencial</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 2. Casa Club -->
+                <a href="galeria.html" class="group bg-zinc-900 rounded-2xl h-60 overflow-hidden relative border border-zinc-800">
+                    <img src="imagenes/casa-club.jpeg" onerror="this.src='imagenes/casa-club.jpg'" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider block">Espacios de Eventos</span>
+                            <span class="text-white font-bold text-lg">Casa Club Equipada</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3. Parque Infantil -->
+                <a href="galeria.html" class="group bg-zinc-900 rounded-2xl h-60 overflow-hidden relative border border-zinc-800">
+                    <img src="imagenes/parque-infantil.jpg" onerror="this.src='imagenes/parque-infantil.jpeg'" alt="Parque Infantil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider block">Área Infantil</span>
+                            <span class="text-white font-bold text-lg">Juegos y Áreas Recreativas</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 4. Parque Canino -->
+                <a href="galeria.html" class="group bg-zinc-900 rounded-2xl h-60 overflow-hidden relative border border-zinc-800">
+                    <img src="imagenes/parque-mascotas.jpeg" onerror="this.src='imagenes/parque-mascotas.jpg'" alt="Parque Canino" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider block">Pet Friendly</span>
+                            <span class="text-white font-bold text-lg">Parque para Mascotas</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 5. Fachada Principal -->
+                <a href="galeria.html" class="group bg-zinc-900 rounded-2xl h-60 overflow-hidden relative border border-zinc-800">
+                    <img src="imagenes/hero.jpeg" alt="Fachadas del Desarrollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider block">Diseño Moderno</span>
+                            <span class="text-white font-bold text-lg">Fachadas Residenciales</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 6. Áreas Verdes -->
+                <a href="galeria.html" class="group bg-zinc-900 rounded-2xl h-60 overflow-hidden relative border border-zinc-800">
+                    <img src="imagenes/areas-verdes.jpeg" onerror="this.src='imagenes/hero.jpeg'" alt="Áreas Verdes y Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider block">Seguridad y Naturaleza</span>
+                            <span class="text-white font-bold text-lg">Áreas Verdes y Privada</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="galeria.html" class="inline-flex items-center gap-2 border border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black font-bold px-8 py-3.5 rounded-full transition-all text-sm">
+                    Ver Galería Completa de Fotos <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
         </section>
     </main>
