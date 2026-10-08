@@ -12,20 +12,20 @@
 
     <!-- ENCABEZADO / MENÚ PRINCIPAL -->
     <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
             
             <!-- LOGOTIPOS OFICIALES -->
-            <div class="flex items-center gap-3 md:gap-4">
+            <div class="flex items-center gap-2 sm:gap-4">
                 <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-10 sm:h-12 w-auto object-contain">
+                    <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-9 sm:h-12 w-auto object-contain">
                 </a>
-                <span class="w-px h-8 bg-zinc-800"></span>
+                <span class="w-px h-7 bg-zinc-800"></span>
                 <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
+                    <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-9 sm:h-12 w-auto object-contain">
                 </a>
             </div>
 
-            <!-- NAVEGACIÓN CENTRAL -->
+            <!-- NAVEGACIÓN EN COMPUTADORA -->
             <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
                 <a href="index.html" class="text-orange-500 font-bold">Inicio</a>
                 <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
@@ -34,27 +34,36 @@
                 <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
 
-            <!-- PERFIL DEL ASESOR CERTIFICADO -->
-            <div class="flex items-center gap-3">
-                <div class="flex items-center gap-2.5 bg-zinc-900 border border-zinc-800 pl-2 pr-3 py-1 rounded-full">
-                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-8 h-8 rounded-full object-cover border border-orange-500">
-                    <div class="flex flex-col text-left">
+            <!-- CONTROLES DERECHA: ASESOR + BOTÓN MENÚ MÓVIL -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 pl-1.5 pr-2.5 py-1 rounded-full">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-orange-500">
+                    <div class="flex flex-col text-left hidden sm:flex">
                         <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
                         <span class="text-[8px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
                     </div>
                 </div>
 
-                <a href="contacto.html" class="hidden sm:inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-4 py-2 rounded-full text-xs transition-all shadow">
-                   Agendar Visita
-                </a>
+                <!-- BOTÓN MENÚ HAMBURGUESA PARA CELULARES -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-orange-400 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
+        </div>
 
+        <!-- MENÚ DESPLEGABLE MÓVIL (PANTALLAS PEQUEÑAS) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-4 space-y-3 text-sm font-medium">
+            <a href="index.html" class="block text-orange-500 font-bold py-1">Inicio</a>
+            <a href="modelos.html" class="block text-zinc-300 hover:text-orange-400 py-1">Modelos</a>
+            <a href="galeria.html" class="block text-zinc-300 hover:text-orange-400 py-1">Galería</a>
+            <a href="creditos.html" class="block text-zinc-300 hover:text-orange-400 py-1">Créditos</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-orange-400 py-1">Contacto</a>
         </div>
     </header>
 
     <main class="flex-grow">
         <!-- HERO CON PORTADA -->
-        <section class="relative py-20 px-6 border-b border-zinc-800 bg-cover bg-center overflow-hidden" style="background-image: url('imagenes/hero.jpeg');">
+        <section class="relative py-16 sm:py-20 px-6 border-b border-zinc-800 bg-cover bg-center overflow-hidden" style="background-image: url('imagenes/hero.jpeg');">
             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/70"></div>
 
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -64,16 +73,16 @@
                         <span>Asesoría Patrimonial Especializada</span>
                     </div>
                     
-                    <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white drop-shadow-md">Conoce la casa de tus sueños en Andalucía</h1>
-                    <p class="text-zinc-200 text-lg max-w-2xl mb-8 drop-shadow">
-                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club. Te acompaño personally paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-white drop-shadow-md">Conoce la casa de tus sueños en Andalucía</h1>
+                    <p class="text-zinc-200 text-base sm:text-lg max-w-2xl mb-8 drop-shadow">
+                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club. Te acompaño personalmente paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
                     </p>
                     
-                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow-lg transition-all">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow-lg transition-all text-center">
                             Agendar Visita Gratis
                         </a>
-                        <a href="modelos.html" class="border border-zinc-400 bg-black/40 backdrop-blur-md hover:bg-zinc-900 text-white font-semibold px-8 py-3.5 rounded-full transition-all">
+                        <a href="modelos.html" class="border border-zinc-400 bg-black/40 backdrop-blur-md hover:bg-zinc-900 text-white font-semibold px-8 py-3.5 rounded-full transition-all text-center">
                             Ver Modelos
                         </a>
                     </div>
@@ -86,7 +95,7 @@
                             Atención Directa
                         </div>
                         
-                        <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-28 h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
+                        <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
                         
                         <h3 class="text-xl font-bold text-white mb-1">Alberto Jasso</h3>
                         <p class="text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Asesor Certificado de Ventas</p>
@@ -104,13 +113,13 @@
         </section>
 
         <!-- RESUMEN MODELOS -->
-        <section class="py-20 max-w-7xl mx-auto px-6">
-            <div class="text-center mb-14">
+        <section class="py-16 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-white mb-2">Prototipos Disponibles</h2>
-                <p class="text-zinc-400">Modelos de 2 y 3 recámaras diseñados para cada estilo de vida.</p>
+                <p class="text-zinc-400 text-sm">Modelos de 2 y 3 recámaras diseñados para cada estilo de vida.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- ÁLAMO -->
                 <div class="bg-zinc-900 rounded-2xl border border-zinc-800 p-6 flex flex-col justify-between hover:border-orange-500/50 transition-all">
                     <div>
@@ -168,6 +177,11 @@
 
     <script>
         lucide.createIcons();
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>
