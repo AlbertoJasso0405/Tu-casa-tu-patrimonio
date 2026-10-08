@@ -65,42 +65,42 @@
             <button onclick="filterGallery('parques')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Parques y Recreación</button>
         </div>
 
-        <!-- CUADRÍCULA DE FOTOS REALES -->
+        <!-- CUADRÍCULA DE FOTOS REALES (6 TARJETAS COMPLETAS) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Alberca -->
+            <!-- 1. Alberca -->
             <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/alberca.jpg" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="imagenes/alberca.jpg" onerror="this.src='imagenes/alberca.jpeg'" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <span class="text-orange-400 font-semibold text-sm">Alberca Residencial</span>
                 </div>
             </div>
 
-            <!-- Casa Club -->
+            <!-- 2. Casa Club -->
             <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/casa-club.jpeg" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="imagenes/casa-club.jpeg" onerror="this.src='imagenes/casa-club.jpg'" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <span class="text-orange-400 font-semibold text-sm">Casa Club para Eventos</span>
                 </div>
             </div>
 
-            <!-- Parque Infantil -->
+            <!-- 3. Parque Infantil -->
             <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/parque-infantil.jpg" alt="Parque Infantil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="imagenes/parque-infantil.jpg" onerror="this.src='imagenes/parque-infantil.jpeg'" alt="Parque Infantil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <span class="text-orange-400 font-semibold text-sm">Parque Infantil Recreativo</span>
                 </div>
             </div>
 
-            <!-- Parque de Mascotas -->
+            <!-- 4. Parque de Mascotas -->
             <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/parque-mascotas.jpeg" alt="Parque Canino Pet Friendly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="imagenes/parque-mascotas.jpeg" onerror="this.src='imagenes/parque-mascotas.jpg'" alt="Parque Canino Pet Friendly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <span class="text-orange-400 font-semibold text-sm">Parque Canino (Pet Friendly)</span>
                 </div>
             </div>
 
-            <!-- Fachada Principal -->
+            <!-- 5. Fachada Principal -->
             <div class="gallery-item fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
                 <img src="imagenes/hero.jpeg" alt="Fachadas del Desarrollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
@@ -108,11 +108,11 @@
                 </div>
             </div>
 
-            <!-- Áreas Verdes / Fachada Principal -->
-            <div class="gallery-item fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/fachada-principal.jpeg" alt="Áreas Verdes y Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <!-- 6. Áreas Verdes / Privada -->
+            <div class="gallery-item parques fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/areas-verdes.jpeg" onerror="this.src='imagenes/hero.jpeg'" alt="Áreas Verdes y Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Áreas Verdes y Acceso</span>
+                    <span class="text-orange-400 font-semibold text-sm">Áreas Verdes y Entorno Residencial</span>
                 </div>
             </div>
 
