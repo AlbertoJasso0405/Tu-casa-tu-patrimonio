@@ -4,53 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andalucía Residencial — Asesor Certificado | Tu Casa Tu Patrimonio</title>
-    <meta name="description" content="Casas en privada con alberca, balcón y casa club en Tizayuca, Hidalgo. Consulta disponiblidad con un Asesor Certificado de Andalucía Residencial.">
+    <meta name="description" content="Casas en privada con alberca, balcón y casa club en Tizayuca, Hidalgo. Consulta disponibilidad con un Asesor Certificado de Andalucía Residencial.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen">
 
-    <!-- ENCABEZADO / MENÚ -->
-    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex flex-col">
-                <a href="index.html" class="text-xl font-bold tracking-tight text-white">Andalucía <span class="text-orange-500">Residencial</span></a>
-                <span class="text-[10px] text-orange-400/90 font-medium tracking-wider uppercase -mt-1">Asesor Certificado</span>
+    <!-- ENCABEZADO / MENÚ PRINCIPAL CON DOS LOGOS Y FOTO DE ASESOR -->
+    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            
+            <!-- LOGOTIPOS (TU CASA TU PATRIMONIO + ANDALUCÍA RESIDENCIAL) -->
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-3">
+                    <!-- Logo Tu Casa Tu Patrimonio -->
+                    <img src="imagenes/logo-patrimonio.png" onerror="this.style.display='none'" alt="Tu Casa Tu Patrimonio" class="h-10 w-auto object-contain">
+                    <span class="text-xs font-bold uppercase text-amber-500 tracking-wider hidden sm:inline">Tu Casa Tu Patrimonio</span>
+                </a>
+                
+                <span class="w-px h-8 bg-zinc-800 hidden sm:block"></span>
+                
+                <a href="index.html" class="flex flex-col">
+                    <span class="text-lg font-extrabold tracking-tight text-white">Andalucía <span class="text-orange-500">Residencial</span></span>
+                    <span class="text-[10px] text-orange-400 font-medium tracking-wider uppercase -mt-1">Desarrollo Exclusivo</span>
+                </a>
             </div>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+
+            <!-- NAVEGACIÓN CENTRAL -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
                 <a href="index.html" class="text-orange-500 font-bold">Inicio</a>
                 <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
                 <a href="galeria.html" class="hover:text-orange-400 transition-colors">Galería</a>
                 <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
-            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-5 py-2 rounded-full text-sm transition-all shadow">
-               Agendar Visita
-            </a>
+
+            <!-- PERFIL DEL ASESOR CERTIFICADO Y BOTÓN DE ACCIÓN -->
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 bg-zinc-900 border border-zinc-800 pl-3 pr-4 py-1.5 rounded-full">
+                    <img src="imagenes/asesor.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Alberto+Jasso&background=f97316&color=000'" alt="Alberto Jasso - Asesor Certificado" class="w-9 h-9 rounded-full object-cover border border-orange-500">
+                    <div class="flex flex-col text-left">
+                        <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
+                        <span class="text-[9px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
+                    </div>
+                </div>
+
+                <a href="contacto.html" class="hidden sm:inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-4 py-2 rounded-full text-xs transition-all shadow">
+                   Agendar Visita
+                </a>
+            </div>
+
         </div>
     </header>
 
     <main class="flex-grow">
-        <!-- HERO -->
-        <section class="bg-zinc-950 text-white py-24 px-6 text-center relative border-b border-zinc-800">
-            <div class="max-w-4xl mx-auto relative z-10">
-                <!-- Distintivo de Asesor Certificado -->
-                <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 px-4 py-1.5 rounded-full text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                    <i data-lucide="award" class="w-4 h-4 text-orange-500"></i>
-                    <span>Asesor Certificado de Andalucía Residencial</span>
-                </div>
+        <!-- HERO CON TARJETA DESTACADA DEL ASESOR -->
+        <section class="bg-zinc-950 text-white py-20 px-6 relative border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Conoce la casa de tus sueños</h1>
-                <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-                    Un desarrollo exclusivo con alberca, balcón y casa club[cite: 13]. Te acompaño paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow-lg transition-all">
-                        Agendar Visita Gratis
-                    </a>
-                    <a href="modelos.html" class="border border-zinc-700 hover:bg-zinc-900 text-white font-semibold px-8 py-3.5 rounded-full transition-all">
-                        Ver Modelos
-                    </a>
+                <div class="lg:col-span-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 px-4 py-1.5 rounded-full text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                        <i data-lucide="award" class="w-4 h-4 text-orange-500"></i>
+                        <span>Asesoría Patrimonial Especializada</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Conoce la casa de tus sueños en Andalucía</h1>
+                    <p class="text-zinc-400 text-lg max-w-2xl mb-8">
+                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club[cite: 13]. Te acompaño personalmente paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow-lg transition-all">
+                            Agendar Visita Gratis
+                        </a>
+                        <a href="modelos.html" class="border border-zinc-700 hover:bg-zinc-900 text-white font-semibold px-8 py-3.5 rounded-full transition-all">
+                            Ver Modelos
+                        </a>
+                    </div>
                 </div>
+
+                <!-- TARJETA VISUAL DE PRESENTACIÓN DEL ASESOR -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="bg-zinc-900 border border-orange-500/40 rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-black font-bold text-[10px] px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                            Atención Directa
+                        </div>
+                        
+                        <img src="imagenes/asesor.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Alberto+Jasso&background=f97316&color=000'" alt="Alberto Jasso" class="w-28 h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
+                        
+                        <h3 class="text-xl font-bold text-white mb-1">Alberto Jasso</h3>
+                        <p class="text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Asesor Certificado de Ventas</p>
+                        <p class="text-zinc-400 text-xs mb-6 leading-relaxed">
+                            "Mi compromiso es ayudarte a elegir el mejor prototipo para tu familia y asegurar la aprobación de tu crédito patrimonial."
+                        </p>
+                        
+                        <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20quisiera%20asesor%C3%ADa%20personalizada%20sobre%20Andaluc%C3%ADa%20Residencial" target="_blank" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-full text-xs transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -110,7 +163,7 @@
     </main>
 
     <footer class="bg-zinc-950 text-zinc-500 py-6 border-t border-zinc-800 text-xs text-center">
-        <p>© 2026 Andalucía Residencial. Todos los derechos reservados. Atendido por Asesor Certificado.</p>
+        <p>© 2026 Andalucía Residencial — Tu Casa Tu Patrimonio. Atendido por Alberto Jasso, Asesor Certificado.</p>
     </footer>
 
     <script>
