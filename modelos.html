@@ -47,7 +47,7 @@
     <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
         <div class="text-center mb-14">
             <h1 class="text-4xl font-extrabold text-white mb-3">Modelos y Precios de Lista</h1>
-            <p class="text-zinc-400 max-w-2xl mx-auto">Explora nuestros 4 prototipos residenciales con carrusel interactivo de 6 imágenes y precios actualizados.</p>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Explora nuestros 4 prototipos residenciales con carrusel interactivo de imágenes y precios actualizados.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -58,12 +58,12 @@
                     <!-- CARRUSEL ÁLAMO (6 FOTOS) -->
                     <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
                         <div id="carousel-alamo" class="w-full h-full relative">
-                            <img src="imagenes/alamo-1.jpeg" onerror="this.src='imagenes/alamo.jpeg'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Álamo Vista 1">
-                            <img src="imagenes/alamo-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 2">
-                            <img src="imagenes/alamo-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 3">
-                            <img src="imagenes/alamo-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 4">
-                            <img src="imagenes/alamo-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 5">
-                            <img src="imagenes/alamo-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 6">
+                            <img src="imagenes/alamo.jpeg" alt="Álamo Vista 1" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                            <img src="imagenes/alamo-2.jpg" onerror="this.src='imagenes/alamo-2.jpeg'" alt="Álamo Vista 2" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/alamo-3.jpeg" onerror="this.src='imagenes/alamo-3.jpg'" alt="Álamo Vista 3" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/alamo-4.jpeg" onerror="this.src='imagenes/alamo-4.jpg'" alt="Álamo Vista 4" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/alamo-5.jpeg" onerror="this.src='imagenes/alamo-5.jpg'" alt="Álamo Vista 5" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/alamo-6.jpeg" onerror="this.src='imagenes/alamo-6.jpg'" alt="Álamo Vista 6" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         </div>
                         <button onclick="changeSlide('alamo', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
                         <button onclick="changeSlide('alamo', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
@@ -81,9 +81,9 @@
                             <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Recámaras</span>
                         </div>
 
-                        <!-- PRECIO DE LISTA -->
+                        <!-- PRECIO SIN "DESDE" -->
                         <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
-                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio:</span>
                             <span class="text-2xl font-extrabold text-orange-500">$1,373,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
                         </div>
 
@@ -108,12 +108,12 @@
                     <!-- CARRUSEL ARAGÓN (6 FOTOS) -->
                     <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
                         <div id="carousel-aragon" class="w-full h-full relative">
-                            <img src="imagenes/aragon-1.jpeg" onerror="this.src='imagenes/aragon.jpeg'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Aragón Vista 1">
-                            <img src="imagenes/aragon-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 2">
-                            <img src="imagenes/aragon-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 3">
-                            <img src="imagenes/aragon-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 4">
-                            <img src="imagenes/aragon-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 5">
-                            <img src="imagenes/aragon-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 6">
+                            <img src="imagenes/aragon.jpeg" alt="Aragón Vista 1" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                            <img src="imagenes/aragon-2.jpg" onerror="this.src='imagenes/aragon-2.jpeg'" alt="Aragón Vista 2" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/aragon-3.jpg" onerror="this.src='imagenes/aragon-3.jpeg'" alt="Aragón Vista 3" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/aragon-4.jpg" onerror="this.src='imagenes/aragon-4.jpeg'" alt="Aragón Vista 4" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/aragon-5.jpg" onerror="this.src='imagenes/aragon-5.jpeg'" alt="Aragón Vista 5" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/aragon-6.jpg" onerror="this.src='imagenes/aragon-6.jpeg'" alt="Aragón Vista 6" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         </div>
                         <button onclick="changeSlide('aragon', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
                         <button onclick="changeSlide('aragon', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
@@ -131,9 +131,9 @@
                             <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Rec. + Estancia</span>
                         </div>
 
-                        <!-- PRECIO DE LISTA -->
+                        <!-- PRECIO SIN "DESDE" -->
                         <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
-                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio:</span>
                             <span class="text-2xl font-extrabold text-orange-500">$1,525,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
                         </div>
 
@@ -158,12 +158,12 @@
                     <!-- CARRUSEL TENERIFE (6 FOTOS) -->
                     <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
                         <div id="carousel-tenerife" class="w-full h-full relative">
-                            <img src="imagenes/tenerife-1.jpeg" onerror="this.src='imagenes/tenerife.jpeg'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Tenerife Vista 1">
-                            <img src="imagenes/tenerife-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 2">
-                            <img src="imagenes/tenerife-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 3">
-                            <img src="imagenes/tenerife-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 4">
-                            <img src="imagenes/tenerife-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 5">
-                            <img src="imagenes/tenerife-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 6">
+                            <img src="imagenes/tenerife.jpeg" alt="Tenerife Vista 1" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                            <img src="imagenes/tenerife-2.jpg" onerror="this.src='imagenes/tenerife-2.jpeg'" alt="Tenerife Vista 2" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/tenerife-3.jpg" onerror="this.src='imagenes/tenerife-3.jpeg'" alt="Tenerife Vista 3" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/tenerife-4.jpg" onerror="this.src='imagenes/tenerife-4.jpeg'" alt="Tenerife Vista 4" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/tenerife-5.jpg" onerror="this.src='imagenes/tenerife-5.jpeg'" alt="Tenerife Vista 5" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/tenerife-6.jpg" onerror="this.src='imagenes/tenerife-6.jpeg'" alt="Tenerife Vista 6" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         </div>
                         <button onclick="changeSlide('tenerife', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
                         <button onclick="changeSlide('tenerife', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
@@ -181,9 +181,9 @@
                             <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">3 Recámaras</span>
                         </div>
 
-                        <!-- PRECIO DE LISTA -->
+                        <!-- PRECIO SIN "DESDE" -->
                         <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
-                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio:</span>
                             <span class="text-2xl font-extrabold text-orange-500">$1,826,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
                         </div>
 
@@ -208,12 +208,12 @@
                     <!-- CARRUSEL CÁCERES (6 FOTOS) -->
                     <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
                         <div id="carousel-caceres" class="w-full h-full relative">
-                            <img src="imagenes/caceres-1.jpeg" onerror="this.src='imagenes/Caceres.jpeg'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Cáceres Vista 1">
-                            <img src="imagenes/caceres-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 2">
-                            <img src="imagenes/caceres-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 3">
-                            <img src="imagenes/caceres-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 4">
-                            <img src="imagenes/caceres-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 5">
-                            <img src="imagenes/caceres-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 6">
+                            <img src="imagenes/Caceres.jpeg" alt="Cáceres Vista 1" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                            <img src="imagenes/caceres-2.jpg" onerror="this.src='imagenes/caceres-2.jpeg'" alt="Cáceres Vista 2" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/caceres-3.jpg" onerror="this.src='imagenes/caceres-3.jpeg'" alt="Cáceres Vista 3" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/caceres-4.jpg" onerror="this.src='imagenes/caceres-4.jpeg'" alt="Cáceres Vista 4" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/caceres-5.jpg" onerror="this.src='imagenes/caceres-5.jpeg'" alt="Cáceres Vista 5" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                            <img src="imagenes/caceres-6.jpg" onerror="this.src='imagenes/caceres-6.jpeg'" alt="Cáceres Vista 6" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
                         </div>
                         <button onclick="changeSlide('caceres', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
                         <button onclick="changeSlide('caceres', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
@@ -231,9 +231,9 @@
                             <span class="bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">3 Rec. Premium</span>
                         </div>
 
-                        <!-- PRECIO DE LISTA -->
+                        <!-- PRECIO SIN "DESDE" -->
                         <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
-                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio:</span>
                             <span class="text-2xl font-extrabold text-orange-500">$2,179,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
                         </div>
 
@@ -262,7 +262,7 @@
     <script>
         lucide.createIcons();
 
-        // LÓGICA DE CONTROL DE LOS CARRUSELES DE IMÁGENES (6 FOTOS POR MODELO)
+        // LÓGICA DE CONTROL DE LOS CARRUSELES DE IMÁGENES
         const currentSlides = { alamo: 0, aragon: 0, tenerife: 0, caceres: 0 };
 
         function changeSlide(model, direction) {
