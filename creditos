@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones de Crédito — Andalucía Residencial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-black text-slate-100 flex flex-col min-h-screen">
+
+    <!-- ENCABEZADO / MENÚ PRINCIPAL -->
+    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-3 md:gap-4">
+                <a href="index.html" class="flex items-center">
+                    <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-10 sm:h-12 w-auto object-contain">
+                </a>
+                <span class="w-px h-8 bg-zinc-800"></span>
+                <a href="index.html" class="flex items-center">
+                    <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
+                <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
+                <a href="galeria.html" class="hover:text-orange-400 transition-colors">Galería</a>
+                <a href="creditos.html" class="text-orange-500 font-bold">Créditos</a>
+                <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2.5 bg-zinc-900 border border-zinc-800 pl-2 pr-3 py-1 rounded-full">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-8 h-8 rounded-full object-cover border border-orange-500">
+                    <div class="flex flex-col text-left">
+                        <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
+                        <span class="text-[8px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
+                    </div>
+                </div>
+                <a href="contacto.html" class="hidden sm:inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-4 py-2 rounded-full text-xs transition-all shadow">
+                   Agendar Visita
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+            <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Asesoría Financiera Patrimonial</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-3">Opciones de Crédito Aceptadas</h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto text-sm">Aceptamos y gestionamos los principales esquemas de financiamiento. Te acompañamos personalmente desde tu precalificación hasta la firma de escrituras sin costo.</p>
+        </div>
+
+        <!-- SECCIÓN 1: INFONAVIT -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-orange-500 text-black flex items-center justify-center font-bold">
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                </div>
+                <h2 class="text-2xl font-extrabold text-white">Créditos INFONAVIT</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tradicional -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-orange-400 mb-2">INFONAVIT Tradicional</h3>
+                    <p class="text-zinc-300 text-xs leading-relaxed mb-4">Utiliza el 100% de tu crédito otorgado por el instituto sumado a la Subcuenta de Vivienda. Ideal para trabajadores en cotización formal constante.</p>
+                    <span class="text-[11px] text-zinc-500 font-medium">✓ Descuento por nómina directo</span>
+                </div>
+
+                <!-- Cofinavit -->
+                <div class="bg-zinc-900 border border-orange-500/40 rounded-2xl p-6 relative overflow-hidden shadow-lg">
+                    <div class="absolute top-0 right-0 bg-orange-500 text-black font-bold text-[9px] px-3 py-0.5 rounded-bl-lg uppercase tracking-wider">
+                        Más Crédito
+                    </div>
+                    <h3 class="text-lg font-bold text-orange-400 mb-2">COFINAVIT</h3>
+                    <p class="text-zinc-300 text-xs leading-relaxed mb-4">Suma tu crédito INFONAVIT + Subcuenta de Vivienda + Crédito Bancario. Es la mejor alternativa para alcanzar un monto de crédito mucho mayor y adquirir el modelo de tus sueños.</p>
+                    <span class="text-[11px] text-orange-400 font-semibold">✓ Maximiza tu capacidad de compra</span>
+                </div>
+
+                <!-- Conyugal / Unamos Créditos -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-orange-400 mb-2">Unamos Créditos (CI + CB)</h3>
+                    <p class="text-zinc-300 text-xs leading-relaxed mb-4">Une tu crédito con tu pareja, familiar, o corresidente sin necesidad de estar casados. Sumen sus capacidades financieras para acceder a casas de mayor tamaño.</p>
+                    <span class="text-[11px] text-zinc-500 font-medium">✓ Junta 2 créditos individuales</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: FOVISSSTE -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-orange-500 text-black flex items-center justify-center font-bold">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                </div>
+                <h2 class="text-2xl font-extrabold text-white">Créditos FOVISSSTE</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tradicional -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-orange-400 mb-2">FOVISSSTE Tradicional</h3>
+                    <p class="text-zinc-300 text-xs leading-relaxed mb-4">Diseñado para trabajadores del Estado con puntaje activo. Aplicamos tu crédito de forma directa y ágil con el respaldo de tu Subcuenta de Vivienda SAR.</p>
+                    <span class="text-[11px] text-zinc-500 font-medium">✓ Orientado a trabajadores de la educación y gobierno</span>
+                </div>
+
+                <!-- Fovissste para Todos -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-orange-400 mb-2">FOVISSSTE para Todos</h3>
+                    <p class="text-zinc-300 text-xs leading-relaxed mb-4">Esquema en cofinanciamiento con entidades bancarias con los montos de crédito más altos del mercado y descuentos vía nómina altamente preferenciales.</p>
+                    <span class="text-[11px] text-zinc-500 font-medium">✓ Mayor liquidez y respuesta rápida</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: ALIANZAS BANCARIAS -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-orange-500 text-black flex items-center justify-center font-bold">
+                    <i data-lucide="building" class="w-5 h-5"></i>
+                </div>
+                <h2 class="text-2xl font-extrabold text-white">Alianzas Bancarias Preferenciales</h2>
+            </div>
+
+            <p class="text-zinc-400 text-xs mb-6 max-w-2xl">Trabajamos con las instituciones bancarias líderes en México para ofrecerte tasas de interés competitivas, plazos a tu medida y aprobación ágil:</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500 transition-colors">
+                    <span class="text-xl font-extrabold text-white block mb-1">BBVA</span>
+                    <span class="text-[11px] text-orange-400 font-medium">Tasa Preferencial</span>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500 transition-colors">
+                    <span class="text-xl font-extrabold text-white block mb-1">SANTANDER</span>
+                    <span class="text-[11px] text-orange-400 font-medium">Hipoteca Plus</span>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500 transition-colors">
+                    <span class="text-xl font-extrabold text-white block mb-1">BANORTE</span>
+                    <span class="text-[11px] text-orange-400 font-medium">Crédito Fuerte</span>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-orange-500 transition-colors">
+                    <span class="text-xl font-extrabold text-white block mb-1">SCOTIABANK</span>
+                    <span class="text-[11px] text-orange-400 font-medium">Aprobación Ágil</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- LLAMADO A LA ACCIÓN: PRECALIFICACIÓN -->
+        <div class="bg-gradient-to-r from-orange-500/20 via-zinc-900 to-zinc-900 border border-orange-500/50 rounded-2xl p-8 text-center shadow-2xl">
+            <h3 class="text-2xl font-extrabold text-white mb-2">¿No sabes cuánto crédito tienes disponible?</h3>
+            <p class="text-zinc-300 text-xs max-w-2xl mx-auto mb-6">Te ayudo a revisar tu precalificación de INFONAVIT, FOVISSSTE o banco en minutos sin compromiso.</p>
+            
+            <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20quisiera%20que%20me%20ayudes%20a%20revisar%20mi%20precalificaci%C3%B3n%20de%20cr%C3%A9dito" target="_blank" class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-black font-extrabold px-8 py-4 rounded-full shadow-lg transition-all text-sm">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Solicitar Precalificación por WhatsApp
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-500 py-6 border-t border-zinc-800 text-xs text-center">
+        <p>© 2026 Andalucía Residencial — Tu Casa Tu Patrimonio. Atendido por Alberto Jasso, Asesor Certificado.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
