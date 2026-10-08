@@ -10,20 +10,27 @@
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen">
 
-    <!-- ENCABEZADO / MENÚ PRINCIPAL CON DOS LOGOS OFICIALES Y FOTO DE ASESOR -->
+    <!-- ENCABEZADO / MENÚ PRINCIPAL CON DOS LOGOS Y FOTO DE ASESOR -->
     <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
             
-            <!-- LOGOTIPOS OFICIALES (TU CASA TU PATRIMONIO + ANDALUCÍA RESIDENCIAL) -->
-            <div class="flex items-center gap-4">
-                <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-patrimonio.png" onerror="this.src='imagenes/logo-patrimonio.jpg'" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
+            <!-- MARCAS Y LOGOTIPOS (SISTEMA HÍBRIDO CON RESPALDO) -->
+            <div class="flex items-center gap-3 md:gap-4">
+                <!-- Marca 1: Tu Casa Tu Patrimonio -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="imagenes/logo-patrimonio.png" id="img-logo-1" onerror="this.style.display='none'; document.getElementById('text-logo-1').style.display='inline-block';" alt="Tu Casa Tu Patrimonio" class="h-9 w-auto object-contain">
+                    <span id="text-logo-1" class="text-xs font-bold uppercase text-amber-500 tracking-wider">Tu Casa Tu Patrimonio</span>
                 </a>
                 
-                <span class="w-px h-8 bg-zinc-800"></span>
+                <span class="w-px h-6 bg-zinc-800"></span>
                 
-                <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-andalucia.png" onerror="this.src='imagenes/logo-andalucia.jpg'" alt="Andalucía Residencial" class="h-9 sm:h-11 w-auto object-contain">
+                <!-- Marca 2: Andalucía Residencial -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="imagenes/logo-andalucia.png" id="img-logo-2" onerror="this.style.display='none'; document.getElementById('text-logo-2').style.display='flex';" alt="Andalucía Residencial" class="h-9 w-auto object-contain">
+                    <div id="text-logo-2" class="flex flex-col">
+                        <span class="text-base font-extrabold tracking-tight text-white leading-none">Andalucía <span class="text-orange-500">Residencial</span></span>
+                        <span class="text-[9px] text-orange-400 font-medium tracking-wider uppercase">Desarrollo Exclusivo</span>
+                    </div>
                 </a>
             </div>
 
@@ -36,12 +43,12 @@
             </nav>
 
             <!-- PERFIL DEL ASESOR CERTIFICADO Y BOTÓN DE ACCIÓN -->
-            <div class="flex items-center gap-4">
-                <div class="flex items-center gap-3 bg-zinc-900 border border-zinc-800 pl-2 pr-4 py-1.5 rounded-full">
-                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-9 h-9 rounded-full object-cover border border-orange-500">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2.5 bg-zinc-900 border border-zinc-800 pl-2 pr-3 py-1 rounded-full">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-8 h-8 rounded-full object-cover border border-orange-500">
                     <div class="flex flex-col text-left">
                         <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
-                        <span class="text-[9px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
+                        <span class="text-[8px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
                     </div>
                 </div>
 
