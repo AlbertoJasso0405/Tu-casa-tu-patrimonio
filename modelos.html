@@ -3,141 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelos de Casas — Andalucía Residencial</title>
+    <title>Galería de Amenidades — Andalucía Residencial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .filter-btn.active {
+            background-color: #f97316;
+            color: #000000;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen">
 
-    <!-- ENCABEZADO / MENÚ -->
-    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold tracking-tight text-white">Andalucía <span class="text-orange-500">Residencial</span></a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+    <!-- ENCABEZADO / MENÚ PRINCIPAL -->
+    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-3 md:gap-4">
+                <a href="index.html" class="flex items-center">
+                    <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-10 sm:h-12 w-auto object-contain">
+                </a>
+                <span class="w-px h-8 bg-zinc-800"></span>
+                <a href="index.html" class="flex items-center">
+                    <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
                 <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
-                <a href="modelos.html" class="text-orange-500 font-bold">Modelos</a>
-                <a href="galeria.html" class="hover:text-orange-400 transition-colors">Galería</a>
+                <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
+                <a href="galeria.html" class="text-orange-500 font-bold">Galería</a>
                 <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
-            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-5 py-2 rounded-full text-sm transition-all shadow">
-               Agendar Visita
-            </a>
+
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2.5 bg-zinc-900 border border-zinc-800 pl-2 pr-3 py-1 rounded-full">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-8 h-8 rounded-full object-cover border border-orange-500">
+                    <div class="flex flex-col text-left">
+                        <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
+                        <span class="text-[8px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
+                    </div>
+                </div>
+                <a href="contacto.html" class="hidden sm:inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-4 py-2 rounded-full text-xs transition-all shadow">
+                   Agendar Visita
+                </a>
+            </div>
         </div>
     </header>
 
     <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-14">
-            <h1 class="text-4xl font-extrabold text-white mb-3">Modelos de Casas</h1>
-            <p class="text-zinc-400 max-w-2xl mx-auto">Conoce nuestros 4 prototipos diseñados con los más altos estándares de calidad y distribución eficiente para tu familia.</p>
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-white mb-3">Galería de Amenidades y Fachadas</h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Explora la alberca, la casa club, las áreas verdes y los espacios recreativos diseñados para la convivencia familiar en Andalucía Residencial.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- FILTROS DE CATEGORÍA -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+            <button onclick="filterGallery('todos')" class="filter-btn active px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Todas</button>
+            <button onclick="filterGallery('amenidades')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Amenidades</button>
+            <button onclick="filterGallery('fachadas')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Fachadas</button>
+            <button onclick="filterGallery('parques')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Parques y Recreación</button>
+        </div>
+
+        <!-- CUADRÍCULA DE FOTOS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- PROTOTIPO 1: ÁLAMO -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/alamo.jpeg" alt="Prototipo Álamo" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo ÁLAMO</h2>
-                            <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Recámaras</span>
-                        </div>
-                        <p class="text-zinc-500 text-xs mb-6">Construcción: 58.30 m² | Lote: 67.50 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala y Comedor</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Cocina</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 1 ½ Baños</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Patio trasero y de servicio</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Balcón y Estacionamiento</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20%C3%81LAMO" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Álamo</a>
+            <!-- Alberca -->
+            <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/alberca.jpeg" onerror="this.src='imagenes/alberca.jpg'" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Alberca Residencial</span>
                 </div>
             </div>
 
-            <!-- PROTOTIPO 2: ARAGÓN -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/aragon.jpeg" alt="Prototipo Aragón" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo ARAGÓN</h2>
-                            <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Rec. + Estancia</span>
-                        </div>
-                        <p class="text-orange-400 font-semibold text-xs mb-6">Construcción: 69.35 m² | Lote: 67.50 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Estancia familiar (TV)</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala y Comedor</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Cocina y 1 ½ Baños</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Balcón y Patio trasero</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="star" class="w-4 h-4 text-orange-500"></i> Proyecto de ampliación</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20ARAG%C3%93N" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Aragón</a>
+            <!-- Casa Club -->
+            <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/casa-club.jpeg" onerror="this.src='imagenes/casa-club.jpg'" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Casa Club para Eventos</span>
                 </div>
             </div>
 
-            <!-- PROTOTIPO 3: TENERIFE -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/tenerife.jpeg" alt="Prototipo Tenerife" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo TENERIFE</h2>
-                            <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">3 Recámaras</span>
-                        </div>
-                        <p class="text-zinc-500 text-xs mb-6">Construcción: 78.65 m² | Lote: 90.00 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 3 Recámaras espaciosas</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala, Comedor y Cocina</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 1 ½ Baños</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Patio trasero amplio</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="star" class="w-4 h-4 text-orange-500"></i> Proyecto de ampliación</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20TENERIFE" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Tenerife</a>
+            <!-- Parque Infantil -->
+            <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/parque-infantil.jpeg" onerror="this.src='imagenes/parque-infantil.jpg'" alt="Parque Infantil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Parque Infantil Recreativo</span>
                 </div>
             </div>
 
-            <!-- PROTOTIPO 4: CÁCERES -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-orange-500/50 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/Caceres.jpeg" alt="Prototipo Cáceres" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo CÁCERES</h2>
-                            <span class="bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">3 Rec. + Vestidor</span>
-                        </div>
-                        <p class="text-zinc-500 text-xs mb-6">Construcción: 97.59 m² | Lote: 90.00 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Recámara principal con vestidor y baño</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 2 ½ Baños totales</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala, Comedor y Cocina equipada</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Balcón y Patio de servicio</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Acabados residenciales premium</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20C%C3%81CERES" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Cáceres</a>
+            <!-- Parque de Mascotas -->
+            <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/parque-mascotas.jpeg" onerror="this.src='imagenes/parque-mascotas.jpg'" alt="Parque Canino Pet Friendly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Parque Canino (Pet Friendly)</span>
                 </div>
             </div>
 
+            <!-- Fachada Principal -->
+            <div class="gallery-item fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/hero.jpeg" alt="Fachadas del Desarrollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Fachadas Modernas</span>
+                </div>
+            </div>
+
+            <!-- Áreas Verdes -->
+            <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/fachada-principal.jpeg" onerror="this.src='imagenes/hero.jpeg'" alt="Áreas Verdes y Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Áreas Verdes y Cuidado Paisajístico</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-10 mt-14 text-center">
+            <h2 class="text-2xl font-bold text-white mb-2">¿Quieres conocer el desarrollo en persona?</h2>
+            <p class="text-zinc-400 text-sm mb-6">Agenda un recorrido guiado conmigo para visitar la casa club y nuestras casas muestra.</p>
+            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow transition-all inline-block">
+                Agendar Recorrido Presencial
+            </a>
         </div>
     </main>
 
     <footer class="bg-zinc-950 text-zinc-500 py-6 border-t border-zinc-800 text-xs text-center">
-        <p>© 2026 Andalucía Residencial. Todos los derechos reservados.</p>
+        <p>© 2026 Andalucía Residencial — Tu Casa Tu Patrimonio. Atendido por Alberto Jasso, Asesor Certificado.</p>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'todos' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
