@@ -10,23 +10,20 @@
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen">
 
-    <!-- ENCABEZADO / MENÚ PRINCIPAL CON DOS LOGOS Y FOTO DE ASESOR -->
+    <!-- ENCABEZADO / MENÚ PRINCIPAL CON DOS LOGOS OFICIALES Y FOTO DE ASESOR -->
     <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
             
-            <!-- LOGOTIPOS (TU CASA TU PATRIMONIO + ANDALUCÍA RESIDENCIAL) -->
+            <!-- LOGOTIPOS OFICIALES (TU CASA TU PATRIMONIO + ANDALUCÍA RESIDENCIAL) -->
             <div class="flex items-center gap-4">
-                <a href="index.html" class="flex items-center gap-3">
-                    <!-- Logo Tu Casa Tu Patrimonio -->
-                    <img src="imagenes/logo-patrimonio.png" onerror="this.style.display='none'" alt="Tu Casa Tu Patrimonio" class="h-10 w-auto object-contain">
-                    <span class="text-xs font-bold uppercase text-amber-500 tracking-wider hidden sm:inline">Tu Casa Tu Patrimonio</span>
+                <a href="index.html" class="flex items-center">
+                    <img src="imagenes/logo-patrimonio.png" onerror="this.src='imagenes/logo-patrimonio.jpg'" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
                 </a>
                 
-                <span class="w-px h-8 bg-zinc-800 hidden sm:block"></span>
+                <span class="w-px h-8 bg-zinc-800"></span>
                 
-                <a href="index.html" class="flex flex-col">
-                    <span class="text-lg font-extrabold tracking-tight text-white">Andalucía <span class="text-orange-500">Residencial</span></span>
-                    <span class="text-[10px] text-orange-400 font-medium tracking-wider uppercase -mt-1">Desarrollo Exclusivo</span>
+                <a href="index.html" class="flex items-center">
+                    <img src="imagenes/logo-andalucia.png" onerror="this.src='imagenes/logo-andalucia.jpg'" alt="Andalucía Residencial" class="h-9 sm:h-11 w-auto object-contain">
                 </a>
             </div>
 
@@ -40,8 +37,8 @@
 
             <!-- PERFIL DEL ASESOR CERTIFICADO Y BOTÓN DE ACCIÓN -->
             <div class="flex items-center gap-4">
-                <div class="flex items-center gap-3 bg-zinc-900 border border-zinc-800 pl-3 pr-4 py-1.5 rounded-full">
-                    <img src="imagenes/asesor.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Alberto+Jasso&background=f97316&color=000'" alt="Alberto Jasso - Asesor Certificado" class="w-9 h-9 rounded-full object-cover border border-orange-500">
+                <div class="flex items-center gap-3 bg-zinc-900 border border-zinc-800 pl-2 pr-4 py-1.5 rounded-full">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-9 h-9 rounded-full object-cover border border-orange-500">
                     <div class="flex flex-col text-left">
                         <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
                         <span class="text-[9px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
@@ -69,7 +66,7 @@
                     
                     <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Conoce la casa de tus sueños en Andalucía</h1>
                     <p class="text-zinc-400 text-lg max-w-2xl mb-8">
-                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club[cite: 13]. Te acompaño personalmente paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
+                        Un desarrollo exclusivo en Tizayuca, Hidalgo con alberca, balcón y casa club. Te acompaño personalmente paso a paso en el trámite de tu crédito INFONAVIT, FOVISSSTE o bancario sin costo.
                     </p>
                     
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -89,7 +86,7 @@
                             Atención Directa
                         </div>
                         
-                        <img src="imagenes/asesor.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Alberto+Jasso&background=f97316&color=000'" alt="Alberto Jasso" class="w-28 h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
+                        <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-28 h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
                         
                         <h3 class="text-xl font-bold text-white mb-1">Alberto Jasso</h3>
                         <p class="text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Asesor Certificado de Ventas</p>
@@ -111,7 +108,7 @@
         <section class="py-20 max-w-7xl mx-auto px-6">
             <div class="text-center mb-14">
                 <h2 class="text-3xl font-bold text-white mb-2">Prototipos Disponibles</h2>
-                <p class="text-zinc-400">Modelos de 2 y 3 recámaras diseñados para cada estilo de vida[cite: 14, 16, 18, 20].</p>
+                <p class="text-zinc-400">Modelos de 2 y 3 recámaras diseñados para cada estilo de vida.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -120,8 +117,8 @@
                     <div>
                         <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Recámaras</span>
                         <h3 class="text-2xl font-bold text-white mt-4">ÁLAMO</h3>
-                        <p class="text-zinc-500 text-xs mb-4">Const.: 58.30 m² | Lote: 67.50 m²[cite: 14]</p>
-                        <p class="text-zinc-300 text-sm mb-4">1 ½ Baños, sala, comedor, cocina y balcón[cite: 14].</p>
+                        <p class="text-zinc-500 text-xs mb-4">Const.: 58.30 m² | Lote: 67.50 m²</p>
+                        <p class="text-zinc-300 text-sm mb-4">1 ½ Baños, sala, comedor, cocina y balcón.</p>
                     </div>
                     <a href="modelos.html" class="text-orange-500 font-semibold text-sm hover:underline flex items-center gap-1">Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
@@ -131,8 +128,8 @@
                     <div>
                         <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Rec. + Estancia</span>
                         <h3 class="text-2xl font-bold text-white mt-4">ARAGÓN</h3>
-                        <p class="text-zinc-500 text-xs mb-4">Const.: 69.35 m² | Lote: 67.50 m²[cite: 16]</p>
-                        <p class="text-zinc-300 text-sm mb-4">Estancia de TV y proyecto de ampliación[cite: 16].</p>
+                        <p class="text-zinc-500 text-xs mb-4">Const.: 69.35 m² | Lote: 67.50 m²</p>
+                        <p class="text-zinc-300 text-sm mb-4">Estancia de TV y proyecto de ampliación.</p>
                     </div>
                     <a href="modelos.html" class="text-orange-500 font-semibold text-sm hover:underline flex items-center gap-1">Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
@@ -142,8 +139,8 @@
                     <div>
                         <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">3 Recámaras</span>
                         <h3 class="text-2xl font-bold text-white mt-4">TENERIFE</h3>
-                        <p class="text-zinc-500 text-xs mb-4">Const.: 78.65 m² | Lote: 90.00 m²[cite: 18]</p>
-                        <p class="text-zinc-300 text-sm mb-4">Espacios amplios con opción a ampliación[cite: 18].</p>
+                        <p class="text-zinc-500 text-xs mb-4">Const.: 78.65 m² | Lote: 90.00 m²</p>
+                        <p class="text-zinc-300 text-sm mb-4">Espacios amplios con opción a ampliación.</p>
                     </div>
                     <a href="modelos.html" class="text-orange-500 font-semibold text-sm hover:underline flex items-center gap-1">Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
@@ -153,8 +150,8 @@
                     <div>
                         <span class="bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">3 Rec. Premium</span>
                         <h3 class="text-2xl font-bold text-white mt-4">CÁCERES</h3>
-                        <p class="text-zinc-500 text-xs mb-4">Const.: 97.59 m² | Lote: 90.00 m²[cite: 20]</p>
-                        <p class="text-zinc-300 text-sm mb-4">2 ½ Baños, recámara principal con vestidor[cite: 20].</p>
+                        <p class="text-zinc-500 text-xs mb-4">Const.: 97.59 m² | Lote: 90.00 m²</p>
+                        <p class="text-zinc-300 text-sm mb-4">2 ½ Baños, recámara principal con vestidor.</p>
                     </div>
                     <a href="modelos.html" class="text-orange-500 font-semibold text-sm hover:underline flex items-center gap-1">Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
