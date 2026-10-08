@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelos de Casas — Andalucía Residencial</title>
+    <title>Modelos y Precios — Andalucía Residencial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -46,97 +46,198 @@
 
     <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
         <div class="text-center mb-14">
-            <h1 class="text-4xl font-extrabold text-white mb-3">Modelos de Casas</h1>
-            <p class="text-zinc-400 max-w-2xl mx-auto">Conoce nuestros 4 prototipos diseñados con los más altos estándares de calidad y distribución eficiente para tu familia.</p>
+            <h1 class="text-4xl font-extrabold text-white mb-3">Modelos y Precios de Lista</h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Explora nuestros 4 prototipos residenciales con carrusel interactivo de 6 imágenes y precios actualizados.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             <!-- PROTOTIPO 1: ÁLAMO -->
             <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/alamo.jpeg" alt="Prototipo Álamo" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
+                <div>
+                    <!-- CARRUSEL ÁLAMO (6 FOTOS) -->
+                    <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
+                        <div id="carousel-alamo" class="w-full h-full relative">
+                            <img src="imagenes/alamo-1.jpeg" onerror="this.src='imagenes/alamo.jpeg'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Álamo Vista 1">
+                            <img src="imagenes/alamo-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 2">
+                            <img src="imagenes/alamo-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 3">
+                            <img src="imagenes/alamo-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 4">
+                            <img src="imagenes/alamo-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 5">
+                            <img src="imagenes/alamo-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'" class="c-slide-alamo absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Álamo Vista 6">
+                        </div>
+                        <button onclick="changeSlide('alamo', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <button onclick="changeSlide('alamo', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] text-zinc-300 font-medium">
+                            <span id="indicator-alamo">1 / 6</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
                         <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo ÁLAMO</h2>
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">Prototipo ÁLAMO</h2>
+                                <p class="text-zinc-500 text-xs mt-0.5">Construcción: 58.30 m² | Lote: 67.50 m²</p>
+                            </div>
                             <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Recámaras</span>
                         </div>
-                        <p class="text-zinc-500 text-xs mb-6">Construcción: 58.30 m² | Lote: 67.50 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
+
+                        <!-- PRECIO DE LISTA -->
+                        <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-2xl font-extrabold text-orange-500">$1,373,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
+                        </div>
+
+                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-6">
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala y Comedor</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Cocina</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Cocina independizada</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 1 ½ Baños</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Patio trasero y de servicio</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Balcón y Estacionamiento</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Patio trasero y área de servicio</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Balcón panorámico y Estacionamiento</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20%C3%81LAMO" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Álamo</a>
+                </div>
+
+                <div class="px-8 pb-8">
+                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20%C3%81LAMO%20de%20%241%2C373%2C000" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Álamo</a>
                 </div>
             </div>
 
             <!-- PROTOTIPO 2: ARAGÓN -->
             <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/aragon.jpeg" alt="Prototipo Aragón" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
+                <div>
+                    <!-- CARRUSEL ARAGÓN (6 FOTOS) -->
+                    <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
+                        <div id="carousel-aragon" class="w-full h-full relative">
+                            <img src="imagenes/aragon-1.jpeg" onerror="this.src='imagenes/aragon.jpeg'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Aragón Vista 1">
+                            <img src="imagenes/aragon-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 2">
+                            <img src="imagenes/aragon-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 3">
+                            <img src="imagenes/aragon-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 4">
+                            <img src="imagenes/aragon-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 5">
+                            <img src="imagenes/aragon-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-aragon absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Aragón Vista 6">
+                        </div>
+                        <button onclick="changeSlide('aragon', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <button onclick="changeSlide('aragon', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] text-zinc-300 font-medium">
+                            <span id="indicator-aragon">1 / 6</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
                         <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo ARAGÓN</h2>
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">Prototipo ARAGÓN</h2>
+                                <p class="text-zinc-500 text-xs mt-0.5">Construcción: 69.35 m² | Lote: 67.50 m²</p>
+                            </div>
                             <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">2 Rec. + Estancia</span>
                         </div>
-                        <p class="text-orange-400 font-semibold text-xs mb-6">Construcción: 69.35 m² | Lote: 67.50 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Estancia familiar (TV)</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala y Comedor</li>
+
+                        <!-- PRECIO DE LISTA -->
+                        <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-2xl font-extrabold text-orange-500">$1,525,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
+                        </div>
+
+                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-6">
+                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Estancia familiar de TV</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala y Comedor independientes</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Cocina y 1 ½ Baños</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Balcón y Patio trasero</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="star" class="w-4 h-4 text-orange-500"></i> Proyecto de ampliación</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="star" class="w-4 h-4 text-orange-500"></i> Proyecto de ampliación preparado</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20ARAG%C3%93N" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Aragón</a>
+                </div>
+
+                <div class="px-8 pb-8">
+                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20ARAG%C3%93N%20de%20%241%2C525%2C000" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Aragón</a>
                 </div>
             </div>
 
             <!-- PROTOTIPO 3: TENERIFE -->
             <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/tenerife.jpeg" alt="Prototipo Tenerife" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
+                <div>
+                    <!-- CARRUSEL TENERIFE (6 FOTOS) -->
+                    <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
+                        <div id="carousel-tenerife" class="w-full h-full relative">
+                            <img src="imagenes/tenerife-1.jpeg" onerror="this.src='imagenes/tenerife.jpeg'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Tenerife Vista 1">
+                            <img src="imagenes/tenerife-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 2">
+                            <img src="imagenes/tenerife-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 3">
+                            <img src="imagenes/tenerife-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 4">
+                            <img src="imagenes/tenerife-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 5">
+                            <img src="imagenes/tenerife-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-tenerife absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Tenerife Vista 6">
+                        </div>
+                        <button onclick="changeSlide('tenerife', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <button onclick="changeSlide('tenerife', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] text-zinc-300 font-medium">
+                            <span id="indicator-tenerife">1 / 6</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
                         <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo TENERIFE</h2>
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">Prototipo TENERIFE</h2>
+                                <p class="text-zinc-500 text-xs mt-0.5">Construcción: 78.65 m² | Lote: 90.00 m²</p>
+                            </div>
                             <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-semibold px-3 py-1 rounded-full">3 Recámaras</span>
                         </div>
-                        <p class="text-zinc-500 text-xs mb-6">Construcción: 78.65 m² | Lote: 90.00 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
+
+                        <!-- PRECIO DE LISTA -->
+                        <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-2xl font-extrabold text-orange-500">$1,826,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
+                        </div>
+
+                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-6">
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 3 Recámaras espaciosas</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala, Comedor y Cocina</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala, Comedor y Cocina integral</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 1 ½ Baños</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Patio trasero amplio</li>
-                            <li class="flex items-center gap-2.5"><i data-lucide="star" class="w-4 h-4 text-orange-500"></i> Proyecto de ampliación</li>
+                            <li class="flex items-center gap-2.5"><i data-lucide="star" class="w-4 h-4 text-orange-500"></i> Proyecto de ampliación preparado</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20TENERIFE" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Tenerife</a>
+                </div>
+
+                <div class="px-8 pb-8">
+                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20TENERIFE%20de%20%241%2C826%2C000" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Tenerife</a>
                 </div>
             </div>
 
             <!-- PROTOTIPO 4: CÁCERES -->
             <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-orange-500/50 flex flex-col justify-between">
-                <div class="h-64 bg-zinc-950 border-b border-zinc-800 overflow-hidden">
-                    <img src="imagenes/Caceres.jpeg" alt="Prototipo Cáceres" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h2 class="text-2xl font-bold text-white">Prototipo CÁCERES</h2>
-                            <span class="bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">3 Rec. + Vestidor</span>
+                <div>
+                    <!-- CARRUSEL CÁCERES (6 FOTOS) -->
+                    <div class="relative h-72 bg-zinc-950 border-b border-zinc-800 overflow-hidden group">
+                        <div id="carousel-caceres" class="w-full h-full relative">
+                            <img src="imagenes/caceres-1.jpeg" onerror="this.src='imagenes/Caceres.jpeg'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" alt="Cáceres Vista 1">
+                            <img src="imagenes/caceres-2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 2">
+                            <img src="imagenes/caceres-3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 3">
+                            <img src="imagenes/caceres-4.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 4">
+                            <img src="imagenes/caceres-5.jpeg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 5">
+                            <img src="imagenes/caceres-6.jpeg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" class="c-slide-caceres absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" alt="Cáceres Vista 6">
                         </div>
-                        <p class="text-zinc-500 text-xs mb-6">Construcción: 97.59 m² | Lote: 90.00 m²</p>
-                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-8">
+                        <button onclick="changeSlide('caceres', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <button onclick="changeSlide('caceres', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-2 rounded-full border border-zinc-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] text-zinc-300 font-medium">
+                            <span id="indicator-caceres">1 / 6</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">Prototipo CÁCERES</h2>
+                                <p class="text-zinc-500 text-xs mt-0.5">Construcción: 97.59 m² | Lote: 90.00 m²</p>
+                            </div>
+                            <span class="bg-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">3 Rec. Premium</span>
+                        </div>
+
+                        <!-- PRECIO DE LISTA -->
+                        <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 my-5 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 uppercase font-medium">Precio desde:</span>
+                            <span class="text-2xl font-extrabold text-orange-500">$2,179,000 <span class="text-xs font-normal text-zinc-400">MXN</span></span>
+                        </div>
+
+                        <ul class="text-sm text-zinc-300 space-y-2.5 mb-6">
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Recámara principal con vestidor y baño</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> 2 ½ Baños totales</li>
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Sala, Comedor y Cocina equipada</li>
@@ -144,7 +245,10 @@
                             <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500"></i> Acabados residenciales premium</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20C%C3%81CERES" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Cáceres</a>
+                </div>
+
+                <div class="px-8 pb-8">
+                    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20me%20interesa%20el%20Prototipo%20C%C3%81CERES%20de%20%242%2C179%2C000" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-black font-bold py-3.5 rounded-xl transition-colors">Cotizar Modelo Cáceres</a>
                 </div>
             </div>
 
@@ -157,6 +261,24 @@
 
     <script>
         lucide.createIcons();
+
+        // LÓGICA DE CONTROL DE LOS CARRUSELES DE IMÁGENES (6 FOTOS POR MODELO)
+        const currentSlides = { alamo: 0, aragon: 0, tenerife: 0, caceres: 0 };
+
+        function changeSlide(model, direction) {
+            const slides = document.querySelectorAll(`.c-slide-${model}`);
+            const totalSlides = slides.length;
+            
+            slides[currentSlides[model]].classList.add('opacity-0');
+            slides[currentSlides[model]].classList.remove('opacity-100');
+            
+            currentSlides[model] = (currentSlides[model] + direction + totalSlides) % totalSlides;
+            
+            slides[currentSlides[model]].classList.remove('opacity-0');
+            slides[currentSlides[model]].classList.add('opacity-100');
+            
+            document.getElementById(`indicator-${model}`).innerText = `${currentSlides[model] + 1} / ${totalSlides}`;
+        }
     </script>
 </body>
 </html>
