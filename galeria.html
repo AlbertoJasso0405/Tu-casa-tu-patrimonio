@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes — Andalucía Residencial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .filter-btn.active {
+            background-color: #f97316;
+            color: #000000;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-black text-slate-100 flex flex-col min-h-screen">
+
+    <!-- ENCABEZADO / MENÚ -->
+    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-white">Andalucía <span class="text-orange-500">Residencial</span></a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
+                <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
+                <a href="galeria.html" class="text-orange-500 font-bold">Galería</a>
+                <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
+            </nav>
+            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-5 py-2 rounded-full text-sm transition-all shadow">
+               Agendar Visita
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-white mb-3">Galería de Imágenes</h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Explora las fachadas, interiores y las exclusivas amenidades que hacen de Andalucía Residencial tu mejor opción de patrimonio[cite: 13, 14, 16].</p>
+        </div>
+
+        <!-- FILTROS DE CATEGORÍA -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+            <button onclick="filterGallery('todos')" class="filter-btn active px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Todas</button>
+            <button onclick="filterGallery('fachadas')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Fachadas</button>
+            <button onclick="filterGallery('interiores')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Interiores</button>
+            <button onclick="filterGallery('amenidades')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Amenidades</button>
+        </div>
+
+        <!-- CUADRÍCULA -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="gallery-item fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Fachada Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Acceso Principal y Fachada</span>
+                </div>
+            </div>
+
+            <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/alberca.jpg" onerror="this.src='https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80'" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Alberca Residencial</span>
+                </div>
+            </div>
+
+            <div class="gallery-item interiores bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/interiores-sala.jpg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" alt="Sala de estar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Sala y Área Social</span>
+                </div>
+            </div>
+
+            <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/casa-club.jpg" onerror="this.src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80'" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Área Infantil y Casa Club</span>
+                </div>
+            </div>
+
+            <div class="gallery-item interiores bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/interiores-cocina.jpg" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'" alt="Cocina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Cocina Integral Equipada</span>
+                </div>
+            </div>
+
+            <div class="gallery-item interiores bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
+                <img src="imagenes/interiores-recamara.jpg" onerror="this.src='https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80'" alt="Recámara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span class="text-orange-400 font-semibold text-sm">Recámara Principal con Balcón</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-10 mt-14 text-center">
+            <h2 class="text-2xl font-bold text-white mb-2">¿Te gustó lo que viste?</h2>
+            <p class="text-zinc-400 text-sm mb-6">Agenda una visita presencial y recorre las casas muestra de Andalucía Residencial.</p>
+            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow transition-all inline-block">
+                Agendar Recorrido Presencial
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-500 py-6 border-t border-zinc-800 text-xs text-center">
+        <p>© 2026 Andalucía Residencial. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'todos' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

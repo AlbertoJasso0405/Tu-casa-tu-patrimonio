@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Recorrido Gratis — Andalucía Residencial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-black text-slate-100 flex flex-col min-h-screen">
+
+    <!-- ENCABEZADO / MENÚ -->
+    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-white">Andalucía <span class="text-orange-500">Residencial</span></a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
+                <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
+                <a href="galeria.html" class="hover:text-orange-400 transition-colors">Galería</a>
+                <a href="contacto.html" class="text-orange-500 font-bold">Contacto</a>
+            </nav>
+            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-5 py-2 rounded-full text-sm transition-all shadow">
+               Agendar Visita
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+            <h1 class="text-4xl font-extrabold text-white mb-3">Conoce Tu Próximo Hogar</h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Visita nuestras casas muestra en Tizayuca, Hidalgo. Te brindamos asesoría patrimonial y de crédito sin ningún costo ni compromiso[cite: 12, 22].</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- FORMULARIO -->
+            <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 shadow-sm">
+                <h2 class="text-2xl font-bold text-white mb-1">Agenda un Recorrido Gratis</h2>
+                <p class="text-zinc-400 text-xs mb-6">Llena tus datos y un asesor te contactará de inmediato en horario de 7:00 am a 11:00 pm.</p>
+                
+                <form id="contactPageForm" class="flex flex-col gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-300 mb-1">Nombre completo *</label>
+                        <input type="text" id="c_nombre" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-300 mb-1">Teléfono (WhatsApp) *</label>
+                        <input type="tel" id="c_telefono" required placeholder="55 1234 5678" class="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-300 mb-1">Tipo de crédito</label>
+                        <select id="c_credito" class="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="INFONAVIT">INFONAVIT</option>
+                            <option value="FOVISSSTE">FOVISSSTE</option>
+                            <option value="Crédito bancario">Crédito bancario</option>
+                            <option value="Contado">Contado</option>
+                            <option value="Aún no lo sé">Aún no lo sé</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-300 mb-1">Presupuesto estimado</label>
+                        <select id="c_presupuesto" class="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="$1,000,000 o menos">$1,000,000 o menos</option>
+                            <option value="$1,000,000 – $1,400,000">$1,000,000 – $1,400,000</option>
+                            <option value="$1,400,000 – $1,800,000">$1,400,000 – $1,800,000</option>
+                            <option value="Más de $1,800,000">Más de $1,800,000</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-300 mb-1">Tiempo estimado de inversión</label>
+                        <select id="c_tiempo" class="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="Inmediato (menos de 1 mes)">Inmediato (menos de 1 mes)</option>
+                            <option value="Entre 1 y 3 meses">Entre 1 y 3 meses</option>
+                            <option value="Entre 3 y 6 meses">Entre 3 y 6 meses</option>
+                            <option value="Mayor a 6 meses">Mayor a 6 meses</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-black font-bold py-4 rounded-full transition-all shadow-md mt-2">
+                        Quiero mi recorrido gratis
+                    </button>
+                    <p class="text-xs text-center text-zinc-500">Al enviar este formulario aceptas ser contactado por un asesor de ventas.</p>
+                </form>
+            </div>
+
+            <!-- DATOS Y MAPA -->
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6">Información de Contacto</h2>
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="text-orange-500 w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm text-white">Teléfono / WhatsApp</p>
+                                <a href="tel:+527717011984" class="text-zinc-400 text-sm hover:underline">771 701 1984</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="text-orange-500 w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm text-white">Correo electrónico</p>
+                                <a href="mailto:tucasatupatrimoniomexico@gmail.com" class="text-zinc-400 text-sm hover:underline">tucasatupatrimoniomexico@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="text-orange-500 w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm text-white">Ubicación</p>
+                                <p class="text-zinc-400 text-sm">Tizayuca, Hidalgo, México</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="text-orange-500 w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm text-white">Horario de atención</p>
+                                <p class="text-zinc-400 text-sm">Lunes a Domingo: 7:00 am – 11:00 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAPA -->
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-sm h-64 bg-zinc-900">
+                    <iframe title="Ubicación Andalucía Residencial" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.844390458925!2d-98.98000002499712!3d19.804000081559863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1d37446555555%3A0x123456789abcdef!2sTizayuca%2C%20Hidalgo!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20quisiera%20pedir%20informes%20sobre%20Andaluc%C3%ADa%20Residencial" target="_blank" class="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-full shadow transition-all">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Escríbenos directamente por WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-500 py-6 border-t border-zinc-800 text-xs text-center">
+        <p>© 2026 Andalucía Residencial. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.getElementById('contactPageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('c_nombre').value;
+            const telefono = document.getElementById('c_telefono').value;
+            const credito = document.getElementById('c_credito').value;
+            const presupuesto = document.getElementById('c_presupuesto').value;
+            const tiempo = document.getElementById('c_tiempo').value;
+
+            const mensaje = `Hola Alberto, vi la página web y solicito información / recorrido.%0A%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(telefono)}%0A*Crédito:* ${encodeURIComponent(credito)}%0A*Presupuesto:* ${encodeURIComponent(presupuesto)}%0A*Plazo de inversión:* ${encodeURIComponent(tiempo)}`;
+            
+            window.open(`https://wa.me/527717011984?text=${mensaje}`, '_blank');
+        });
+    </script>
+</body>
+</html>
