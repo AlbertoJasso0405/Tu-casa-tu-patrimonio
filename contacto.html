@@ -57,8 +57,6 @@
     <!-- ENCABEZADO / MENÚ PRINCIPAL -->
     <header class="bg-black text-white sticky top-0 z-40 border-b border-zinc-800 shadow-md py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-            
-            <!-- LOGOTIPOS OFICIALES -->
             <div class="flex items-center gap-2 sm:gap-4">
                 <a href="index.html" class="flex items-center">
                     <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-9 sm:h-12 w-auto object-contain">
@@ -69,7 +67,6 @@
                 </a>
             </div>
 
-            <!-- NAVEGACIÓN EN COMPUTADORA -->
             <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
                 <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
                 <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
@@ -78,7 +75,6 @@
                 <a href="contacto.html" class="text-orange-500 font-bold">Contacto</a>
             </nav>
 
-            <!-- CONTROLES DERECHA: ASESOR CON ENLACE A CONTACTO + MENÚ MÓVIL -->
             <div class="flex items-center gap-2 sm:gap-3">
                 <a href="contacto.html" title="Contactar a Alberto Jasso" class="flex items-center gap-2 bg-zinc-900 border border-orange-500 pl-1.5 pr-3 py-1 rounded-full transition-all group">
                     <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-orange-500 group-hover:scale-105 transition-transform">
@@ -88,14 +84,12 @@
                     </div>
                 </a>
 
-                <!-- BOTÓN HAMBURGUESA PARA CELULARES -->
                 <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-orange-400 focus:outline-none">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
-        <!-- MENÚ DESPLEGABLE MÓVIL -->
         <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-4 space-y-3 text-sm font-medium">
             <a href="index.html" class="block text-zinc-300 hover:text-orange-400 py-1">Inicio</a>
             <a href="modelos.html" class="block text-zinc-300 hover:text-orange-400 py-1">Modelos</a>
@@ -108,7 +102,6 @@
     <main class="flex-grow py-12 px-6">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
-            <!-- TARJETA DEL ASESOR Y DATOS DE CONTACTO -->
             <div class="lg:col-span-5 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl shadow-xl">
                 <div class="text-center mb-6">
                     <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-28 h-28 rounded-full object-cover border-2 border-orange-500 mx-auto mb-4 shadow-lg">
@@ -149,7 +142,6 @@
                 </div>
             </div>
 
-            <!-- FORMULARIO DIRECTO A WHATSAPP -->
             <div class="lg:col-span-7 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl shadow-xl">
                 <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Atención Inmediata</span>
                 <h2 class="text-2xl font-bold text-white mb-2">Solicitar Información o Cotización</h2>
@@ -233,7 +225,12 @@
             }
 
             const whatsappUrl = `https://wa.me/527717011984?text=${text}`;
+            
+            // Abre WhatsApp en una pestaña nueva
             window.open(whatsappUrl, '_blank');
+            
+            // Redirige la ventana actual a la página de gracias
+            window.location.href = "gracias.html";
         }
     </script>
 </body>
