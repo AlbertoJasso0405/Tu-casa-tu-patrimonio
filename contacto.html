@@ -142,6 +142,7 @@
                 </div>
             </div>
 
+            <!-- FORMULARIO DIRECTO A WHATSAPP -->
             <div class="lg:col-span-7 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl shadow-xl">
                 <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Atención Inmediata</span>
                 <h2 class="text-2xl font-bold text-white mb-2">Solicitar Información o Cotización</h2>
@@ -155,10 +156,6 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="phone" class="block text-xs font-medium text-zinc-300 mb-1">Teléfono WhatsApp *</label>
-                            <input type="tel" id="phone" required placeholder="10 dígitos" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors">
-                        </div>
-                        <div>
                             <label for="credit" class="block text-xs font-medium text-zinc-300 mb-1">Tipo de Crédito *</label>
                             <select id="credit" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors">
                                 <option value="INFONAVIT">INFONAVIT</option>
@@ -166,6 +163,15 @@
                                 <option value="Bancario">Bancario</option>
                                 <option value="Contado">Contado</option>
                                 <option value="Otro">Otro / Requiero Asesoría</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="timeframe" class="block text-xs font-medium text-zinc-300 mb-1">Tiempo Estimado de Inversión *</label>
+                            <select id="timeframe" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors">
+                                <option value="A menos de 1 mes">A menos de 1 mes (Compra inmediata)</option>
+                                <option value="Entre 1 y 3 meses">Entre 1 y 3 meses</option>
+                                <option value="Más de 3 meses">Más de 3 meses</option>
                             </select>
                         </div>
                     </div>
@@ -210,15 +216,15 @@
         function sendToWhatsApp(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
             const credit = document.getElementById('credit').value;
+            const timeframe = document.getElementById('timeframe').value;
             const model = document.getElementById('model').value;
             const message = document.getElementById('message').value;
 
             let text = `Hola Alberto, vi tu página web tucasatupatrimonio.com y me gustaría recibir información:%0A%0A`;
             text += `*Nombre:* ${encodeURIComponent(name)}%0A`;
-            text += `*Teléfono:* ${encodeURIComponent(phone)}%0A`;
             text += `*Crédito:* ${encodeURIComponent(credit)}%0A`;
+            text += `*Tiempo de Inversión:* ${encodeURIComponent(timeframe)}%0A`;
             text += `*Modelo de interés:* ${encodeURIComponent(model)}%0A`;
             if (message) {
                 text += `*Mensaje:* ${encodeURIComponent(message)}%0A`;
