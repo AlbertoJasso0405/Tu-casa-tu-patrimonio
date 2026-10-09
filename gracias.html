@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXPLF8437Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EXPLF8437Y');
+
+      // Registro automático del evento de conversión / prospecto generado
+      gtag('event', 'generate_lead', {
+        'event_category': 'Formulario',
+        'event_label': 'Solicitud de Información'
+      });
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Gracias por contactarnos! — Andalucía Residencial</title>
@@ -90,7 +106,7 @@
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">¡Muchas gracias por tu interés!</h1>
             
             <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg mx-auto">
-                He recibido tus datos correctamente. En breve me pondré en contacto contigo para brindarte toda la información sobre los modelos disponibles, montos de crédito e intalaciones en <strong class="text-orange-400">Andalucía Residencial</strong>.
+                He recibido tus datos correctamente. En breve me pondré en contacto contigo para brindarte toda la información sobre los modelos disponibles, montos de crédito e instalaciones en <strong class="text-orange-400">Andalucía Residencial</strong>.
             </p>
 
             <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 mb-8 text-left flex items-center gap-4">
