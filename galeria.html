@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXPLF8437Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EXPLF8437Y');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1427908879311879');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1427908879311879&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Amenidades — Andalucía Residencial</title>
+    <title>Galería de Instalaciones — Andalucía Residencial</title>
+    <meta name="description" content="Explora las fotos de la alberca, casa club, parque infantil y fachadas de Andalucía Residencial en Tizayuca, Hidalgo.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .filter-btn.active {
-            background-color: #f97316;
-            color: #000000;
-            font-weight: 700;
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-whatsapp {
+            animation: pulse-subtle 2s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-black text-slate-100 flex flex-col min-h-screen">
+<body class="bg-black text-slate-100 flex flex-col min-h-screen relative">
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/527717011984?text=Hola%20Alberto%2C%20vi%20la%20Galer%C3%ADa%20de%20Andaluc%C3%ADa%20y%20me%20gustar%C3%ADa%20agendar%20una%20visita" 
+       target="_blank" 
+       aria-label="Contactar por WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3.5 sm:p-4 rounded-full shadow-2xl flex items-center gap-2.5 animate-whatsapp border-2 border-white/20 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="hidden sm:inline font-bold text-xs">¿Dudas? WhatsApp Directo</span>
+    </a>
+
+    <!-- BARRA SUPERIOR DE REDES SOCIALES -->
+    <div class="bg-zinc-950 text-zinc-400 py-1.5 px-6 border-b border-zinc-900 text-xs">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="text-[11px] font-medium hidden sm:inline text-zinc-400">Atención Directa y Recorridos en Tizayuca, Hidalgo</span>
+            <div class="flex items-center gap-3 mx-auto sm:mx-0">
+                <span class="text-[10px] uppercase tracking-wider font-bold text-orange-400">Síguenos:</span>
+                <a href="https://www.facebook.com/profile.php?id=61588464390757" target="_blank" class="flex items-center gap-1.5 hover:text-orange-400 transition-colors">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span class="text-[11px] font-medium">Facebook</span>
+                </a>
+                <span class="text-zinc-800">|</span>
+                <a href="https://www.tiktok.com/@andalucia793" target="_blank" class="flex items-center gap-1.5 hover:text-orange-400 transition-colors">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.32 1.56-1.28 2.56.02.91.48 1.8 1.22 2.33.87.64 2.05.77 3.06.39 1.05-.38 1.83-1.34 1.99-2.45.08-1.93.03-3.86.03-5.79 0-3.35.01-6.7.01-10.05z"/></svg>
+                    <span class="text-[11px] font-medium">TikTok</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- ENCABEZADO / MENÚ PRINCIPAL -->
-    <header class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800 shadow-md py-3">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <div class="flex items-center gap-3 md:gap-4">
+    <header class="bg-black text-white sticky top-0 z-40 border-b border-zinc-800 shadow-md py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+            <div class="flex items-center gap-2 sm:gap-4">
                 <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-10 sm:h-12 w-auto object-contain">
+                    <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-9 sm:h-12 w-auto object-contain">
                 </a>
-                <span class="w-px h-8 bg-zinc-800"></span>
+                <span class="w-px h-7 bg-zinc-800"></span>
                 <a href="index.html" class="flex items-center">
-                    <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 sm:h-12 w-auto object-contain">
+                    <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-9 sm:h-12 w-auto object-contain">
                 </a>
             </div>
 
@@ -33,97 +94,122 @@
                 <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
                 <a href="modelos.html" class="hover:text-orange-400 transition-colors">Modelos</a>
                 <a href="galeria.html" class="text-orange-500 font-bold">Galería</a>
+                <a href="ubicacion.html" class="hover:text-orange-400 transition-colors">Ubicación</a>
                 <a href="creditos.html" class="hover:text-orange-400 transition-colors">Créditos</a>
                 <a href="contacto.html" class="hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
 
-            <div class="flex items-center gap-3">
-                <div class="flex items-center gap-2.5 bg-zinc-900 border border-zinc-800 pl-2 pr-3 py-1 rounded-full">
-                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso - Asesor Certificado" class="w-8 h-8 rounded-full object-cover border border-orange-500">
-                    <div class="flex flex-col text-left">
-                        <span class="text-xs font-bold text-white leading-tight">Alberto Jasso</span>
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="contacto.html" title="Contactar a Alberto Jasso" class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 hover:border-orange-500/60 pl-1.5 pr-3 py-1 rounded-full transition-all group">
+                    <img src="imagenes/asesor.jpeg" alt="Alberto Jasso" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-orange-500 group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col text-left hidden sm:flex">
+                        <span class="text-xs font-bold text-white leading-tight group-hover:text-orange-400 transition-colors">Alberto Jasso</span>
                         <span class="text-[8px] text-orange-400 font-semibold uppercase tracking-wider">Asesor Certificado</span>
                     </div>
-                </div>
-                <a href="contacto.html" class="hidden sm:inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-4 py-2 rounded-full text-xs transition-all shadow">
-                   Agendar Visita
                 </a>
+
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-orange-400 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-4 space-y-3 text-sm font-medium">
+            <a href="index.html" class="block text-zinc-300 hover:text-orange-400 py-1">Inicio</a>
+            <a href="modelos.html" class="block text-zinc-300 hover:text-orange-400 py-1">Modelos</a>
+            <a href="galeria.html" class="block text-orange-500 font-bold py-1">Galería</a>
+            <a href="ubicacion.html" class="block text-zinc-300 hover:text-orange-400 py-1">Ubicación</a>
+            <a href="creditos.html" class="block text-zinc-300 hover:text-orange-400 py-1">Créditos</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-orange-400 py-1">Contacto</a>
         </div>
     </header>
 
-    <main class="flex-grow py-16 max-w-7xl mx-auto px-6">
+    <main class="flex-grow py-12 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h1 class="text-4xl font-extrabold text-white mb-3">Galería de Amenidades y Fachadas</h1>
-            <p class="text-zinc-400 max-w-2xl mx-auto">Explora la alberca, la casa club, las áreas verdes y los espacios recreativos diseñados para la convivencia familiar en Andalucía Residencial.</p>
+            <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Recorrido Fotográfico</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 mb-2">Instalaciones y Amenidades</h1>
+            <p class="text-zinc-400 text-sm max-w-xl mx-auto">Conoce de cerca la calidad de vida que te espera en Andalucía Residencial.</p>
         </div>
 
-        <!-- FILTROS DE CATEGORÍA -->
-        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
-            <button onclick="filterGallery('todos')" class="filter-btn active px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Todas</button>
-            <button onclick="filterGallery('amenidades')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Amenidades</button>
-            <button onclick="filterGallery('fachadas')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Fachadas</button>
-            <button onclick="filterGallery('parques')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 transition-all">Parques y Recreación</button>
-        </div>
-
-        <!-- CUADRÍCULA DE FOTOS REALES -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            
             <!-- 1. Alberca -->
-            <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/alberca.jpg" onerror="this.src='imagenes/alberca.jpeg'" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Alberca Residencial</span>
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg group">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/alberca.jpg" onerror="this.src='imagenes/alberca.jpeg'" alt="Alberca Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <span class="text-orange-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Amenidad Principal</span>
+                    <h3 class="text-lg font-bold text-white">Alberca con Solárium</h3>
+                    <p class="text-zinc-400 text-xs mt-2">Área de alberca privada dentro del desarrollo, ideal para disfrutar los fines de semana en familia.</p>
                 </div>
             </div>
 
             <!-- 2. Casa Club -->
-            <div class="gallery-item amenidades bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/casa-club.jpeg" onerror="this.src='imagenes/casa-club.jpg'" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Casa Club para Eventos</span>
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg group">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/casa-club.jpeg" onerror="this.src='imagenes/casa-club.jpg'" alt="Casa Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <span class="text-orange-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Eventos y Conviviencia</span>
+                    <h3 class="text-lg font-bold text-white">Casa Club Equipada</h3>
+                    <p class="text-zinc-400 text-xs mt-2">Espacio amplio para reuniones sociales, cumpleaños y eventos de los residentes.</p>
                 </div>
             </div>
 
             <!-- 3. Parque Infantil -->
-            <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/parque-infantil.jpg" onerror="this.src='imagenes/parque-infantil.jpeg'" alt="Parque Infantil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Parque Infantil Recreativo</span>
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg group">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/parque-infantil.jpg" onerror="this.src='imagenes/parque-infantil.jpeg'" alt="Parque Infantil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <span class="text-orange-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Para los Pequeños</span>
+                    <h3 class="text-lg font-bold text-white">Parque Infantil Seguro</h3>
+                    <p class="text-zinc-400 text-xs mt-2">Juegos recreativos dentro de la privada con acceso controlado para tranquilidad de tus hijos.</p>
                 </div>
             </div>
 
-            <!-- 4. Parque de Mascotas -->
-            <div class="gallery-item parques bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/parque-mascotas.jpeg" onerror="this.src='imagenes/parque-mascotas.jpg'" alt="Parque Canino Pet Friendly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Parque Canino (Pet Friendly)</span>
+            <!-- 4. Parque Canino -->
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg group">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/parque-mascotas.jpeg" onerror="this.src='imagenes/parque-mascotas.jpg'" alt="Parque Canino" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <span class="text-orange-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Pet Friendly</span>
+                    <h3 class="text-lg font-bold text-white">Parque de Mascotas</h3>
+                    <p class="text-zinc-400 text-xs mt-2">Área acondicionada especialmente para que tus mascotas ejerciten y jueguen con total seguridad.</p>
                 </div>
             </div>
 
-            <!-- 5. Fachada Principal -->
-            <div class="gallery-item fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/hero.jpeg" alt="Fachadas del Desarrollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Fachadas Modernas</span>
+            <!-- 5. Fachadas -->
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg group">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/hero.jpeg" alt="Fachadas del Desarrollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <span class="text-orange-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Diseño Moderno</span>
+                    <h3 class="text-lg font-bold text-white">Fachadas Residenciales</h3>
+                    <p class="text-zinc-400 text-xs mt-2">Arquitectura contemporánea con acabados duraderos y balcones elegantes.</p>
                 </div>
             </div>
 
-            <!-- 6. Áreas Verdes / Privada -->
-            <div class="gallery-item parques fachadas bg-zinc-900 rounded-2xl h-64 overflow-hidden relative group border border-zinc-800">
-                <img src="imagenes/areas-verdes.jpeg" onerror="this.src='imagenes/hero.jpeg'" alt="Áreas Verdes y Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span class="text-orange-400 font-semibold text-sm">Áreas Verdes y Entorno Residencial</span>
+            <!-- 6. Áreas Verdes -->
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-lg group">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/areas-verdes.jpeg" onerror="this.src='imagenes/hero.jpeg'" alt="Áreas Verdes y Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <span class="text-orange-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Naturaleza y Tranquilidad</span>
+                    <h3 class="text-lg font-bold text-white">Áreas Verdes Espaciosas</h3>
+                    <p class="text-zinc-400 text-xs mt-2">Jardines bien mantenidos y accesos viales limpios dentro de la privada.</p>
                 </div>
             </div>
-
         </div>
 
-        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-10 mt-14 text-center">
-            <h2 class="text-2xl font-bold text-white mb-2">¿Quieres conocer el desarrollo en persona?</h2>
-            <p class="text-zinc-400 text-sm mb-6">Agenda un recorrido guiado conmigo para visitar la casa club y nuestras casas muestra.</p>
-            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3.5 rounded-full shadow transition-all inline-block">
-                Agendar Recorrido Presencial
+        <div class="mt-16 text-center bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-2xl mx-auto shadow-xl">
+            <h3 class="text-2xl font-bold text-white mb-2">¿Te gustaría conocer las instalaciones en persona?</h3>
+            <p class="text-zinc-400 text-xs mb-6">Agendamos tu visita personalizada de lunes a domingo. ¡Acompáñanos y enamórate de tu próxima casa!</p>
+            <a href="contacto.html" class="bg-orange-500 hover:bg-orange-600 text-black font-extrabold px-8 py-3.5 rounded-full text-xs transition-all shadow-lg inline-block">
+                Agendar Mi Visita Gratis
             </a>
         </div>
     </main>
@@ -135,20 +221,9 @@
     <script>
         lucide.createIcons();
 
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const buttons = document.querySelectorAll('.filter-btn');
-
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            items.forEach(item => {
-                if (category === 'todos' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         }
     </script>
 </body>
