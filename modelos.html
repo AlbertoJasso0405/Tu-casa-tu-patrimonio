@@ -43,6 +43,14 @@
         .animate-whatsapp {
             animation: pulse-subtle 2s infinite ease-in-out;
         }
+        /* Ocultar barra de desplazamiento en carruseles */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="bg-black text-slate-100 flex flex-col min-h-screen relative">
@@ -135,8 +143,18 @@
             <div class="space-y-12">
                 <!-- ÁLAMO -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 items-center shadow-xl">
-                    <div class="lg:col-span-6 h-72 sm:h-80 rounded-2xl overflow-hidden bg-zinc-950">
-                        <img src="imagenes/alamo.jpeg" alt="Prototipo Álamo" class="w-full h-full object-cover">
+                    <div class="lg:col-span-6 relative group">
+                        <div id="carousel-alamo" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar rounded-2xl h-72 sm:h-80 bg-zinc-950">
+                            <img src="imagenes/alamo.jpeg" alt="Prototipo Álamo - Fachada" class="w-full h-full object-cover flex-shrink-0 snap-center">
+                            <img src="imagenes/alamo-2.jpeg" alt="Prototipo Álamo - Interior" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/alamo.jpeg'">
+                            <img src="imagenes/alamo-3.jpeg" alt="Prototipo Álamo - Plano" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/alamo.jpeg'">
+                        </div>
+                        <button onclick="scrollCarousel('carousel-alamo', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="scrollCarousel('carousel-alamo', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
                     </div>
                     <div class="lg:col-span-6 space-y-4">
                         <span class="bg-orange-500/20 text-orange-400 text-xs font-bold px-3 py-1 rounded-full uppercase">2 Recámaras</span>
@@ -158,8 +176,18 @@
 
                 <!-- ARAGÓN -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 items-center shadow-xl">
-                    <div class="lg:col-span-6 h-72 sm:h-80 rounded-2xl overflow-hidden bg-zinc-950">
-                        <img src="imagenes/aragon.jpeg" alt="Prototipo Aragón" class="w-full h-full object-cover">
+                    <div class="lg:col-span-6 relative group">
+                        <div id="carousel-aragon" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar rounded-2xl h-72 sm:h-80 bg-zinc-950">
+                            <img src="imagenes/aragon.jpeg" alt="Prototipo Aragón - Fachada" class="w-full h-full object-cover flex-shrink-0 snap-center">
+                            <img src="imagenes/aragon-2.jpeg" alt="Prototipo Aragón - Estancia" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/aragon.jpeg'">
+                            <img src="imagenes/aragon-3.jpeg" alt="Prototipo Aragón - Plano" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/aragon.jpeg'">
+                        </div>
+                        <button onclick="scrollCarousel('carousel-aragon', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="scrollCarousel('carousel-aragon', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
                     </div>
                     <div class="lg:col-span-6 space-y-4">
                         <span class="bg-orange-500/20 text-orange-400 text-xs font-bold px-3 py-1 rounded-full uppercase">2 Rec. + Estancia TV</span>
@@ -181,8 +209,18 @@
 
                 <!-- TENERIFE -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 items-center shadow-xl">
-                    <div class="lg:col-span-6 h-72 sm:h-80 rounded-2xl overflow-hidden bg-zinc-950">
-                        <img src="imagenes/tenerife.jpeg" alt="Prototipo Tenerife" class="w-full h-full object-cover">
+                    <div class="lg:col-span-6 relative group">
+                        <div id="carousel-tenerife" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar rounded-2xl h-72 sm:h-80 bg-zinc-950">
+                            <img src="imagenes/tenerife.jpeg" alt="Prototipo Tenerife - Fachada" class="w-full h-full object-cover flex-shrink-0 snap-center">
+                            <img src="imagenes/tenerife-2.jpeg" alt="Prototipo Tenerife - Sala" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/tenerife.jpeg'">
+                            <img src="imagenes/tenerife-3.jpeg" alt="Prototipo Tenerife - Plano" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/tenerife.jpeg'">
+                        </div>
+                        <button onclick="scrollCarousel('carousel-tenerife', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="scrollCarousel('carousel-tenerife', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
                     </div>
                     <div class="lg:col-span-6 space-y-4">
                         <span class="bg-orange-500/20 text-orange-400 text-xs font-bold px-3 py-1 rounded-full uppercase">3 Recámaras</span>
@@ -204,8 +242,18 @@
 
                 <!-- CÁCERES -->
                 <div class="bg-zinc-900 border border-orange-500/40 rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 items-center shadow-2xl">
-                    <div class="lg:col-span-6 h-72 sm:h-80 rounded-2xl overflow-hidden bg-zinc-950">
-                        <img src="imagenes/Caceres.jpeg" alt="Prototipo Cáceres" class="w-full h-full object-cover">
+                    <div class="lg:col-span-6 relative group">
+                        <div id="carousel-caceres" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar rounded-2xl h-72 sm:h-80 bg-zinc-950">
+                            <img src="imagenes/Caceres.jpeg" alt="Prototipo Cáceres - Fachada" class="w-full h-full object-cover flex-shrink-0 snap-center">
+                            <img src="imagenes/caceres-2.jpeg" alt="Prototipo Cáceres - Recámara Principal" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/Caceres.jpeg'">
+                            <img src="imagenes/caceres-3.jpeg" alt="Prototipo Cáceres - Plano" class="w-full h-full object-cover flex-shrink-0 snap-center" onerror="this.src='imagenes/Caceres.jpeg'">
+                        </div>
+                        <button onclick="scrollCarousel('carousel-caceres', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="scrollCarousel('carousel-caceres', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-500 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
                     </div>
                     <div class="lg:col-span-6 space-y-4">
                         <span class="bg-orange-500 text-black font-extrabold text-xs px-3 py-1 rounded-full uppercase">3 Recámaras Premium</span>
@@ -238,6 +286,15 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+        }
+
+        function scrollCarousel(containerId, direction) {
+            const container = document.getElementById(containerId);
+            const scrollAmount = container.clientWidth;
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
