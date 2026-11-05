@@ -1,53 +1,220 @@
-<!-- Sección Catálogo Multidesarrollo -->
-<section id="desarrollos" class="py-16 bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Nuestros Desarrollos Destacados</h2>
-            <p class="mt-3 text-lg text-slate-400">Compara alternativas de alta plusvalía en la región y elige la mejor opción para tu patrimonio.</p>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Casa Tu Patrimonio | Agencia Inmobiliaria en Tizayuca y la Región</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Tarjeta Andalucía -->
-            <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col justify-between">
-                <div>
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="imagenes/hero.jpeg" alt="Andalucía Residencial" class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-700">
-                            <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía" class="h-6 w-auto">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">Andalucía Residencial</h3>
-                        <p class="text-slate-400 text-sm mb-4">Desarrollo consolidado con diversas distribuciones, excelente equipamiento y amenidades para toda la familia.</p>
-                    </div>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 w-auto rounded-lg shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/150x50?text=Tu+Casa+Tu+Patrimonio'">
+                <span class="text-xl font-bold tracking-tight text-white hidden sm:inline">Tu Casa <span class="text-amber-500">Tu Patrimonio</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#desarrollos" class="text-slate-300 hover:text-amber-400 font-medium transition">Desarrollos</a>
+                <a href="#servicios" class="text-slate-300 hover:text-amber-400 font-medium transition">Servicios</a>
+                <a href="#nosotros" class="text-slate-300 hover:text-amber-400 font-medium transition">¿Por qué nosotros?</a>
+                <a href="#contacto" class="text-slate-300 hover:text-amber-400 font-medium transition">Contacto</a>
+            </nav>
+            <a href="https://wa.me/5217711234567?text=Hola,%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20encontrar%20casa" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Asesoría Gratis</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Principal -->
+    <section class="relative py-24 bg-slate-950 overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 bg-cover bg-center opacity-25 blur-sm" style="background-image: url('imagenes/hero.jpeg');"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/30 font-semibold px-4 py-1.5 rounded-full text-sm mb-6">
+                <i class="fa-solid fa-house-circle-check mr-2"></i>Asesoría Inmobiliaria Independiente & Multidesarrollo
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight mb-6">
+                Encuentra la casa ideal para tu familia en <span class="text-amber-500">Tizayuca y la región</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Te acompañamos a comparar las mejores opciones residenciales según tu presupuesto, necesidades de espacio y tipo de crédito. Te asesoramos sin costo ni compromiso.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#desarrollos" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-city"></i> Ver Desarrollos Disponibles
+                </a>
+                <a href="https://wa.me/5217711234567?text=Hola,%20quisiera%20saber%20qu%C3%A9%20opciones%20tienen%20disponibles" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> Hablar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indicadores / Métricas -->
+    <section class="py-10 bg-slate-900/50 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-3xl font-extrabold text-amber-400 mb-1">+100%</div>
+                    <div class="text-slate-400 text-sm">Asesoría Neutral e Imparcial</div>
                 </div>
-                <div class="p-6 pt-0">
-                    <a href="andalucia.html" class="block text-center bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3 rounded-xl border border-amber-500/30 transition">
-                        Ver Prototipos y Galería
-                    </a>
+                <div class="p-4">
+                    <div class="text-3xl font-extrabold text-amber-400 mb-1">Múltiples</div>
+                    <div class="text-slate-400 text-sm">Desarrollos Residenciales</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-extrabold text-amber-400 mb-1">Todos</div>
+                    <div class="text-slate-400 text-sm">Los Créditos (Infonavit, Fovissste, Bancario)</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-extrabold text-amber-400 mb-1">0 Restricciones</div>
+                    <div class="text-slate-400 text-sm">Compara en un Solo Recorrido</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Tarjeta Qavalta -->
-            <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col justify-between">
-                <div>
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="imagenes/qavalta-1.jpg" alt="Qavalta Residencial" class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-700">
-                            <img src="imagenes/logo-qavalta.png" alt="Qavalta" class="h-6 w-auto">
+    <!-- Sección Catálogo Multidesarrollo -->
+    <section id="desarrollos" class="py-20 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-3">Nuestros Desarrollos Destacados</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Seleccionamos residenciales con gran plusvalía, excelente conectividad y amenidades para asegurar el patrimonio de tu familia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tarjeta Andalucía -->
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col justify-between group hover:border-amber-500/50 transition duration-300">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="imagenes/hero.jpeg" alt="Andalucía Residencial" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4 bg-slate-900/90 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-700">
+                                <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía" class="h-6 w-auto">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-2 text-amber-400 text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot"></i> Tizayuca, Hgo.
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Andalucía Residencial</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                                Desarrollo consolidado con privadas equipadas, áreas verdes, casa club y variedad de prototipos de 2 y 3 recámaras.
+                            </p>
+                            <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Modelos con pasillo lateral / terreno sobrante</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Acceso controlado y seguridad</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Amenidades equipadas</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">Qavalta Residencial</h3>
-                        <p class="text-slate-400 text-sm mb-4">Nueva opción en portafolio con arquitectura moderna, excelentes acabados e infraestructura estratégica.</p>
+                    <div class="p-6 pt-0">
+                        <a href="andalucia.html" class="block text-center bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3.5 rounded-xl border border-amber-500/30 transition">
+                            Ver Prototipos y Galería de Andalucía <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
-                    <a href="qavalta.html" class="block text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl transition shadow-lg shadow-amber-500/20">
-                        Ver Galería Qavalta
-                    </a>
+
+                <!-- Tarjeta Qavalta -->
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col justify-between group hover:border-amber-500/50 transition duration-300">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="imagenes/qavalta-1.jpg" alt="Qavalta Residencial" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4 bg-slate-900/90 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-700">
+                                <img src="imagenes/logo-qavalta.png" alt="Qavalta" class="h-6 w-auto">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-2 text-amber-400 text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot"></i> Tizayuca, Hgo.
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Qavalta Residencial</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                                Nueva propuesta residencial en la zona con diseño contemporáneo, distribuciones funcionales y espacios pensados en el confort.
+                            </p>
+                            <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Nuevo desarrollo con alta plusvalía</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Diseños arquitectónicos modernos</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Galería de imágenes generales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="qavalta.html" class="block text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 rounded-xl transition shadow-lg shadow-amber-500/20">
+                            Ver Galería de Qavalta <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Por qué elegirnos (Ventajas de Asesor Libre) -->
+    <section id="nosotros" class="py-20 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-3">¿Por qué asesorarte con nosotros?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Al ser un broker inmobiliario independiente, trabajamos para ti y no para una sola constructora.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 border border-amber-500/20">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Comparación Neutral</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Evaluamos juntos los pros y contras de cada desarrollo para encontrar el prototipo que realmente encaje con tu estilo de vida y presupuesto.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 border border-amber-500/20">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Perfilamiento de Crédito</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Revisamos tu puntuación y capacidad de crédito (Infonavit, Fovissste o Bancario) para recomendarte las opciones donde obtengas mejores condiciones.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 border border-amber-500/20">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Recorridos Guiados</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Coordinamos una sola visita donde puedes conocer varios desarrollos de la zona el mismo día, ahorrándote tiempo y vueltas innecesarias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action de Asesoría Directa -->
+    <section id="contacto" class="py-16 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-white mb-4">¿Tienes dudas sobre qué opción conviene más?</h2>
+            <p class="text-slate-300 mb-8 text-lg">
+                Platica directamente con nuestro equipo. Te ayudamos a precalificar tu crédito sin costo y agendamos tu recorrido guiado.
+            </p>
+            <div class="inline-flex flex-col sm:flex-row gap-4">
+                <a href="https://wa.me/5217711234567?text=Hola,%20me%20gustar%C3%ADa%20agendar%20un%20recorrido%20para%20conocer%20las%20opciones%20de%20vivienda" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-3 shadow-lg shadow-emerald-600/30 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Solicitar Asesoría por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-slate-950 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2">© Tu Casa Tu Patrimonio. Asesoría Inmobiliaria Independiente.</p>
+            <p class="text-xs text-slate-600">Imágenes con fines ilustrativos. Disponibilidad y precios sujetos a cambios por parte de los desarrolladores.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
