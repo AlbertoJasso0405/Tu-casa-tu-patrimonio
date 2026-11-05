@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalucía Residencial | Tu Casa Tu Patrimonio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 w-auto rounded-lg shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/150x50?text=Tu+Casa+Tu+Patrimonio'">
+                <span class="text-xl font-bold tracking-tight text-white hidden sm:inline">Tu Casa <span class="text-amber-500">Tu Patrimonio</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#modelos" class="text-slate-300 hover:text-amber-400 font-medium transition text-sm">Modelos</a>
+                <a href="#amenidades" class="text-slate-300 hover:text-amber-400 font-medium transition text-sm">Amenidades</a>
+                <a href="#ubicacion" class="text-slate-300 hover:text-amber-400 font-medium transition text-sm">Ubicación</a>
+                <a href="index.html" class="text-amber-400 hover:text-amber-300 font-medium transition text-sm flex items-center gap-1">
+                    <i class="fa-solid fa-arrow-left text-xs"></i> Volver al Portal
+                </a>
+            </nav>
+            <a href="https://wa.me/5217711234567?text=Hola,%20me%20interesa%20informaci%C3%B3n%20de%20Andaluc%C3%ADa%20Residencial" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-4 py-2 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Agendar Visita</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Andalucía -->
+    <section class="relative py-20 bg-slate-950 overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 blur-sm" style="background-image: url('imagenes/hero.jpeg');"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block p-4 bg-slate-900/80 backdrop-blur rounded-2xl border border-slate-800 shadow-2xl mb-6">
+                <img src="imagenes/logo-andalucia.jpeg" alt="Andalucía Residencial" class="h-14 sm:h-16 w-auto mx-auto object-contain" onerror="this.src='https://via.placeholder.com/200x80?text=Andalucia+Residencial'">
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+                Andalucía <span class="text-amber-500">Residencial</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                El desarrollo perfecto para consolidar tu patrimonio en Tizayuca. Casas de 2 y 3 recámaras con privadas equipadas, áreas verdes y amenidades exclusivas.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#modelos" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-house"></i> Ver Prototipos
+                </a>
+                <a href="https://wa.me/5217711234567?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20modelo%20en%20Andaluc%C3%ADa" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 shadow-lg shadow-emerald-600/30">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Cotizar Modelo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion Prototipos / Modelos -->
+    <section id="modelos" class="py-20 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-3">Nuestros Modelos de Vivienda</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Encuentra la distribución exacta que se adapta a las necesidades de tu familia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Modelo Álamo / Recámara en PB -->
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="imagenes/alamo.jpeg" alt="Modelo Álamo" class="w-full h-full object-cover">
+                            <span class="absolute top-4 right-4 bg-amber-500 text-slate-950 font-extrabold px-3 py-1 rounded-lg text-xs">Más Solicitado</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Modelo Álamo</h3>
+                            <p class="text-slate-400 text-sm mb-4">Ideal para familias que buscan comodidad, terreno sobrante y recámara principal en planta baja.</p>
+                            <div class="grid grid-cols-3 gap-2 py-3 bg-slate-900 rounded-xl border border-slate-800 text-center mb-4 text-xs">
+                                <div><span class="block text-amber-400 font-bold">3</span> Recámaras</div>
+                                <div><span class="block text-amber-400 font-bold">2.5</span> Baños</div>
+                                <div><span class="block text-amber-400 font-bold">Pasillo</span> Lateral</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/5217711234567?text=Hola,%20me%20interesa%20recibir%20la%20ficha%20t%C3%A9cnica%20y%20precio%20del%20Modelo%20%C3%81lamo" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3 rounded-xl border border-amber-500/30 transition text-sm">
+                            Solicitar Ficha y Precio por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modelo Aragón -->
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="imagenes/aragon.jpeg" alt="Modelo Aragón" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Modelo Aragón</h3>
+                            <p class="text-slate-400 text-sm mb-4">Espacios optimizados con excelente iluminación natural y acabados de primera calidad.</p>
+                            <div class="grid grid-cols-3 gap-2 py-3 bg-slate-900 rounded-xl border border-slate-800 text-center mb-4 text-xs">
+                                <div><span class="block text-amber-400 font-bold">3</span> Recámaras</div>
+                                <div><span class="block text-amber-400 font-bold">2</span> Baños</div>
+                                <div><span class="block text-amber-400 font-bold">2</span> Estacionamientos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/5217711234567?text=Hola,%20me%20interesa%20recibir%20la%20ficha%20t%C3%A9cnica%20y%20precio%20del%20Modelo%20Arag%C3%B3n" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3 rounded-xl border border-amber-500/30 transition text-sm">
+                            Solicitar Ficha y Precio por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modelo Tenerife -->
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="imagenes/tenerife.jpeg" alt="Modelo Tenerife" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Modelo Tenerife</h3>
+                            <p class="text-slate-400 text-sm mb-4">Diseño moderno de 2 niveles ideal para iniciar o hacer crecer tu patrimonio.</p>
+                            <div class="grid grid-cols-3 gap-2 py-3 bg-slate-900 rounded-xl border border-slate-800 text-center mb-4 text-xs">
+                                <div><span class="block text-amber-400 font-bold">2</span> Recámaras</div>
+                                <div><span class="block text-amber-400 font-bold">1.5</span> Baños</div>
+                                <div><span class="block text-amber-400 font-bold">Jardín</span> Posterior</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/5217711234567?text=Hola,%20me%20interesa%20recibir%20la%20ficha%20t%C3%A9cnica%20y%20precio%20del%20Modelo%20Tenerife" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3 rounded-xl border border-amber-500/30 transition text-sm">
+                            Solicitar Ficha y Precio por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modelo CÁCERES -->
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="imagenes/Caceres.jpeg" alt="Modelo Cáceres" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Modelo Cáceres</h3>
+                            <p class="text-slate-400 text-sm mb-4">Distribución inteligente orientada a maximizar los espacios sociales y privacidad.</p>
+                            <div class="grid grid-cols-3 gap-2 py-3 bg-slate-900 rounded-xl border border-slate-800 text-center mb-4 text-xs">
+                                <div><span class="block text-amber-400 font-bold">3</span> Recámaras</div>
+                                <div><span class="block text-amber-400 font-bold">2.5</span> Baños</div>
+                                <div><span class="block text-amber-400 font-bold">Estancia</span> Amplia</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/5217711234567?text=Hola,%20me%20interesa%20recibir%20la%20ficha%20t%C3%A9cnica%20y%20precio%20del%20Modelo%20C%C3%A1ceres" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3 rounded-xl border border-amber-500/30 transition text-sm">
+                            Solicitar Ficha y Precio por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenidades y Áreas Comunes -->
+    <section id="amenidades" class="py-20 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-3">Amenidades y Calidad de Vida</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Disfruta de la tranquilidad de vivir en privadas con amenidades exclusivas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
+                    <img src="imagenes/alberca.jpg" alt="Alberca y Casa Club" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-6 flex flex-col justify-end">
+                        <h3 class="text-xl font-bold text-white mb-1">Alberca y Casa Club</h3>
+                        <p class="text-slate-300 text-sm">Espacios recreativos para compartir momentos únicos con tu familia y amigos.</p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
+                    <img src="imagenes/casa-club.jpeg" alt="Áreas Verdes y Seguridad" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-6 flex flex-col justify-end">
+                        <h3 class="text-xl font-bold text-white mb-1">Áreas Verdes y Acceso Controlado</h3>
+                        <p class="text-slate-300 text-sm">Tranquilidad absoluta para tu familia con caseta de vigilancia 24/7 y áreas infantiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación y Conectividad -->
+    <section id="ubicacion" class="py-20 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-3">Ubicación Estratégica</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Excelente conectividad hacia la CDMX, Pachuca y zonas industriales clave.</p>
+            </div>
+
+            <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 text-center max-w-3xl mx-auto shadow-xl">
+                <div class="w-16 h-16 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 border border-amber-500/20">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Tizayuca, Hidalgo</h3>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                    Ubicado en el corredor de mayor crecimiento con acceso rápido a vialidades principales, centros comerciales, escuelas y transporte público.
+                </p>
+                <a href="https://wa.me/5217711234567?text=Hola,%20me%20gustar%C3%ADa%20recibir%20la%20ubicaci%C3%B3n%20exacta%20y%20coordinar%20mi%20visita%20a%20Andaluc%C3%ADa" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-amber-500/20 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Solicitar Ubicación en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2">© Tu Casa Tu Patrimonio. Asesoría Inmobiliaria Independiente para Andalucía Residencial.</p>
+            <a href="index.html" class="text-amber-400 hover:underline text-xs">← Volver al Portal Multidesarrollos</a>
+        </div>
+    </footer>
+
+</body>
+</html>
