@@ -18,24 +18,21 @@
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-10 w-auto rounded-lg shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/150x50?text=Tu+Casa+Tu+Patrimonio'">
-                <span class="text-xl font-bold tracking-tight text-white hidden sm:inline">Tu Casa <span class="text-amber-500">Tu Patrimonio</span></span>
+    <!-- Header / Navbar (Optimizado para verse perfecto en celulares y computadoras) -->
+    <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="imagenes/logo-patrimonio.jpeg" alt="Tu Casa Tu Patrimonio" class="h-9 w-auto rounded-lg shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/150x50?text=Tu+Casa+Tu+Patrimonio'">
+                <span class="text-base sm:text-xl font-bold tracking-tight text-white">Tu Casa <span class="text-amber-500">Tu Patrimonio</span></span>
             </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#desarrollos" class="text-slate-300 hover:text-amber-400 font-medium transition">Desarrollos</a>
-                <a href="movilidad.html" class="text-slate-300 hover:text-amber-400 font-medium transition flex items-center gap-1.5"><i class="fa-solid fa-train-subway text-amber-400"></i> Movilidad</a>
-                <a href="#cuestionario" class="text-slate-300 hover:text-amber-400 font-medium transition">Precalificación</a>
-                <a href="#creditos" class="text-slate-300 hover:text-amber-400 font-medium transition">Créditos</a>
-                <a href="#nosotros" class="text-slate-300 hover:text-amber-400 font-medium transition">¿Por qué nosotros?</a>
+            <nav class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium">
+                <a href="#desarrollos" class="text-slate-300 hover:text-amber-400 transition">Desarrollos</a>
+                <a href="movilidad.html" class="text-slate-300 hover:text-amber-400 transition flex items-center gap-1"><i class="fa-solid fa-train-subway text-amber-400"></i> Movilidad</a>
+                <a href="#creditos" class="text-slate-300 hover:text-amber-400 transition hidden sm:inline">Créditos</a>
+                <a href="#cuestionario" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-3.5 py-2 rounded-xl font-bold transition shadow-lg shadow-amber-500/20">
+                    Asesoría
+                </a>
             </nav>
-            <a href="#cuestionario" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
-                <i class="fa-solid fa-clipboard-question text-lg"></i>
-                <span>Asesoría Gratis</span>
-            </a>
         </div>
     </header>
 
@@ -46,10 +43,10 @@
             <span class="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/30 font-semibold px-4 py-1.5 rounded-full text-sm mb-6">
                 <i class="fa-solid fa-house-circle-check mr-2"></i>Asesoría Inmobiliaria Independiente & Multidesarrollo
             </span>
-            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight mb-6">
-                Encuentra la casa ideal para tu familia en <span class="text-amber-500">Tecámac, Zumpango, Tizayuca y Pachuca</span>[cite: 3]
+            <h1 class="text-3xl sm:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight mb-6">
+                Encuentra la casa ideal para tu familia en <span class="text-amber-500">Tecámac, Zumpango, Tizayuca y Pachuca</span>
             </h1>
-            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
                 Te acompañamos a comparar las mejores opciones residenciales según tu presupuesto, necesidades de espacio y tipo de crédito. Te asesoramos sin costo ni compromiso.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -208,8 +205,8 @@
                             <select id="zona" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 focus:outline-none focus:border-amber-500 transition text-sm">
                                 <option value="Tizayuca">Tizayuca</option>
                                 <option value="Pachuca / Zempoala">Pachuca / Zempoala</option>
-                                <option value="Tecámac">Tecámac[cite: 3]</option>
-                                <option value="Zumpango">Zumpango[cite: 3]</option>
+                                <option value="Tecámac">Tecámac</option>
+                                <option value="Zumpango">Zumpango</option>
                                 <option value="Abierto a opciones de la región">Abierto a opciones de la región</option>
                             </select>
                         </div>
