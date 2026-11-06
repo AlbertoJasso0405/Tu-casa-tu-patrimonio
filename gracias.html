@@ -7,12 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Google Analytics (GA4) Event Tag -->
+    <!-- Google tag (gtag.js) GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag.js?id=G-EXPLF8437Y"></script>
     <script>
-      // Disparo automático de evento de conversión para Google Analytics 4
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      gtag('config', 'G-EXPLF8437Y');
+
+      // Evento de conversión para Google Analytics 4
       gtag('event', 'generate_lead', {
         'event_category': 'Engagement',
         'event_label': 'Formulario de Calificación Completado'
@@ -42,60 +45,14 @@
                 <i class="fa-solid fa-circle-check"></i>
             </div>
 
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">¡Mensaje Recibido!</h1>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">¡Mensaje Registrado!</h1>
             <p class="text-slate-300 text-base mb-8 leading-relaxed">
-                Gracias por ponerte en contacto. Para darte una <strong class="text-amber-400">asesoría más rápida y personalizada</strong>, ayúdanos respondiendo estas breves preguntas:
+                Gracias por ponerte en contacto. Tu información ha sido procesada correctamente y se ha abierto tu sesión de WhatsApp para enviarla al asesor.
             </p>
 
-            <!-- Formulario de Calificación Rápida -->
-            <form action="https://wa.me/5217717011984" method="GET" target="_blank" class="text-left space-y-5">
-                
-                <!-- Nombre -->
-                <div>
-                    <label class="block text-slate-300 text-sm font-semibold mb-2">Tu Nombre Completo</label>
-                    <input type="text" name="text" id="nombreInput" placeholder="Ej. Juan Pérez" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition text-sm">
-                </div>
-
-                <!-- Tipo de Crédito -->
-                <div>
-                    <label class="block text-slate-300 text-sm font-semibold mb-2">Tipo de Crédito que deseas utilizar</label>
-                    <select id="creditoSelect" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-amber-500 transition text-sm">
-                        <option value="Infonavit (Tradicional / Unamos Créditos)">Infonavit (Tradicional / Unamos Créditos)</option>
-                        <option value="Fovissste">Fovissste</option>
-                        <option value="Crédito Bancario / Cofinavit">Crédito Bancario / Cofinavit</option>
-                        <option value="Pago de Contado / Recursos Propios">Pago de Contado / Recursos Propios</option>
-                        <option value="Aún no lo sé / Requiero Asesoría">Aún no lo sé / Requiero Asesoría</option>
-                    </select>
-                </div>
-
-                <!-- Zona de Interés -->
-                <div>
-                    <label class="block text-slate-300 text-sm font-semibold mb-2">Zona o Municipio de Interés</label>
-                    <select id="zonaSelect" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-amber-500 transition text-sm">
-                        <option value="Tizayuca">Tizayuca</option>
-                        <option value="Tecámac">Tecámac</option>
-                        <option value="Zumpango">Zumpango</option>
-                        <option value="Pachuca">Pachuca</option>
-                        <option value="Abierto a opciones de la región">Abierto a opciones de la región</option>
-                    </select>
-                </div>
-
-                <!-- Tiempo Estimado de Compra -->
-                <div>
-                    <label class="block text-slate-300 text-sm font-semibold mb-2">¿En cuánto tiempo planeas comprar?</label>
-                    <select id="tiempoSelect" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-amber-500 transition text-sm">
-                        <option value="De inmediato / Este mes">De inmediato / Este mes</option>
-                        <option value="De 1 a 3 meses">De 1 a 3 meses</option>
-                        <option value="De 3 a 6 meses">De 3 a 6 meses</option>
-                        <option value="Solo estoy cotizando">Solo estoy cotizando</option>
-                    </select>
-                </div>
-
-                <!-- Botón de Envío que genera el mensaje formateado para WhatsApp -->
-                <button type="button" onclick="enviarAWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 text-base mt-6">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar Datos por WhatsApp
-                </button>
-            </form>
+            <a href="index.html" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-amber-500/20">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Volver a la Página Principal
+            </a>
         </div>
     </main>
 
@@ -111,25 +68,6 @@
     <footer class="py-6 bg-slate-950 text-center text-slate-500 text-xs border-t border-slate-800">
         <p>© Tu Casa Tu Patrimonio. Medición de Conversión e Interés de Clientes.</p>
     </footer>
-
-    <!-- Script para estructurar el mensaje directo a WhatsApp -->
-    <script>
-        function enviarAWhatsApp() {
-            var nombre = document.getElementById('nombreInput').value || 'Cliente';
-            var credito = document.getElementById('creditoSelect').value;
-            var zona = document.getElementById('zonaSelect').value;
-            var tiempo = document.getElementById('tiempoSelect').value;
-
-            var mensaje = "Hola, completé mi perfilamiento en la web:%0A" +
-                          "*Nombre:* " + encodeURIComponent(nombre) + "%0A" +
-                          "*Tipo de Crédito:* " + encodeURIComponent(credito) + "%0A" +
-                          "*Zona de Interés:* " + encodeURIComponent(zona) + "%0A" +
-                          "*Tiempo de Compra:* " + encodeURIComponent(tiempo);
-
-            var url = "https://wa.me/5217717011984?text=" + mensaje;
-            window.open(url, '_blank');
-        }
-    </script>
 
 </body>
 </html>
