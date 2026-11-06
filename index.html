@@ -19,11 +19,11 @@
             <nav class="hidden md:flex items-center gap-8">
                 <a href="#desarrollos" class="text-slate-300 hover:text-amber-400 font-medium transition">Desarrollos</a>
                 <a href="#creditos" class="text-slate-300 hover:text-amber-400 font-medium transition">Créditos</a>
+                <a href="#cuestionario" class="text-slate-300 hover:text-amber-400 font-medium transition">Perfilamiento</a>
                 <a href="#nosotros" class="text-slate-300 hover:text-amber-400 font-medium transition">¿Por qué nosotros?</a>
-                <a href="gracias.html" class="text-slate-300 hover:text-amber-400 font-medium transition">Contacto</a>
             </nav>
-            <a href="https://wa.me/5217717011984?text=Hola,%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20encontrar%20casa" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
+            <a href="#cuestionario" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
+                <i class="fa-solid fa-clipboard-question text-lg"></i>
                 <span>Asesoría Gratis</span>
             </a>
         </div>
@@ -43,11 +43,11 @@
                 Te acompañamos a comparar las mejores opciones residenciales según tu presupuesto, necesidades de espacio y tipo de crédito. Te asesoramos sin costo ni compromiso.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#desarrollos" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
-                    <i class="fa-solid fa-city"></i> Ver Desarrollos Disponibles
+                <a href="#cuestionario" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-list-check"></i> Precalificar y Cotizar
                 </a>
-                <a href="https://wa.me/5217717011984?text=Hola,%20quisiera%20saber%20qu%C3%A9%20opciones%20tienen%20disponibles" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> Hablar por WhatsApp
+                <a href="#desarrollos" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-city text-amber-400"></i> Ver Desarrollos
                 </a>
             </div>
         </div>
@@ -73,6 +73,64 @@
                     <div class="text-3xl font-extrabold text-amber-400 mb-1">0 Restricciones</div>
                     <div class="text-slate-400 text-sm">Compara en un Solo Recorrido</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuestionario de Perfilamiento previo a WhatsApp -->
+    <section id="cuestionario" class="py-20 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Paso 1 de 2: Precalificación Express</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1 mb-2">Solicita tu Asesoría Personalizada</h2>
+                    <p class="text-slate-400 text-sm">Completa estos breves datos para recibir las opciones que mejor se adapten a tu crédito e interés directo en tu WhatsApp.</p>
+                </div>
+
+                <form id="perfilamientoForm" onsubmit="enviarWhatsAppYGracias(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-slate-300 text-sm font-semibold mb-2">Tu Nombre Completo</label>
+                        <input type="text" id="nombre" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition text-sm">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-slate-300 text-sm font-semibold mb-2">Tipo de Crédito</label>
+                            <select id="credito" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 focus:outline-none focus:border-amber-500 transition text-sm">
+                                <option value="Infonavit (Tradicional / Unamos Créditos)">Infonavit (Tradicional / Unamos Créditos)</option>
+                                <option value="Fovissste">Fovissste</option>
+                                <option value="Crédito Bancario / Cofinavit">Crédito Bancario / Cofinavit</option>
+                                <option value="Contado / Recursos Propios">Contado / Recursos Propios</option>
+                                <option value="Requiero Asesoría para evaluar mi crédito">Requiero Asesoría para evaluar mi crédito</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 text-sm font-semibold mb-2">Municipio de Interés</label>
+                            <select id="zona" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 focus:outline-none focus:border-amber-500 transition text-sm">
+                                <option value="Tizayuca">Tizayuca</option>
+                                <option value="Pachuca / Zempoala">Pachuca / Zempoala</option>
+                                <option value="Tecámac">Tecámac</option>
+                                <option value="Zumpango">Zumpango</option>
+                                <option value="Abierto a opciones de la región">Abierto a opciones de la región</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-300 text-sm font-semibold mb-2">¿En cuánto tiempo planeas comprar?</label>
+                        <select id="tiempo" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 focus:outline-none focus:border-amber-500 transition text-sm">
+                            <option value="De inmediato / Este mes">De inmediato / Este mes</option>
+                            <option value="De 1 a 3 meses">De 1 a 3 meses</option>
+                            <option value="De 3 a 6 meses">De 3 a 6 meses</option>
+                            <option value="Solo estoy cotizando opciones">Solo estoy cotizando opciones</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition flex items-center justify-center gap-3 shadow-lg shadow-emerald-600/30 text-lg">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar Datos y Abrir WhatsApp
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -103,11 +161,6 @@
                             <p class="text-slate-400 text-sm mb-6 leading-relaxed">
                                 Desarrollo consolidado con privadas equipadas, áreas verdes, casa club y variedad de prototipos de 2 y 3 recámaras.
                             </p>
-                            <ul class="text-sm text-slate-300 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Modelos con pasillo lateral / terreno sobrante</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Acceso controlado y seguridad</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Amenidades equipadas</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
@@ -117,7 +170,7 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta Qavalta -->
+                <!-- Tarjeta Qavalta (Pachuca / Zempoala) -->
                 <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col justify-between group hover:border-amber-500/50 transition duration-300">
                     <div>
                         <div class="h-64 overflow-hidden relative">
@@ -128,17 +181,12 @@
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-2 mb-2 text-amber-400 text-sm font-semibold">
-                                <i class="fa-solid fa-location-dot"></i> Tizayuca, Hgo.
+                                <i class="fa-solid fa-location-dot"></i> Pachuca / Zempoala, Hgo.
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-3">Qavalta Residencial</h3>
                             <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                                Nueva propuesta residencial en la zona con diseño contemporáneo, distribuciones funcionales y espacios pensados en el confort.
+                                Nueva propuesta residencial en la zona sur de Pachuca con diseño contemporáneo, distribuciones funcionales y gran plusvalía.
                             </p>
-                            <ul class="text-sm text-slate-300 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Nuevo desarrollo con alta plusvalía</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Diseños arquitectónicos modernos</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Galería de imágenes generales</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
@@ -170,16 +218,14 @@
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Crédito Infonavit</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Aprovecha tu Subcuenta de Vivienda e integra diferentes esquemas para alcanzar mayor monto de compra:
-                        </p>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Aprovecha tu Subcuenta de Vivienda e integra diferentes esquemas:</p>
                         <ul class="text-sm text-slate-300 space-y-2 mb-6">
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i> <span><strong>Tradicional:</strong> Uso directo de tu puntuación e historial laboral.</span></li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i> <span><strong>Unamos Créditos:</strong> Suma tu crédito con un familiar, pareja o amigo.</span></li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i> <span><strong>Conyugal / Infonavit Total:</strong> Mancomunado legal para maximizar monto.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i> <span><strong>Tradicional:</strong> Uso directo de tu puntuación laboral.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i> <span><strong>Unamos Créditos:</strong> Suma tu crédito con familiar o pareja.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i> <span><strong>Conyugal / Infonavit Total:</strong> Maximiza el monto.</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5217717011984?text=Hola,%20quisiera%20consultar%20mi%20precalificaci%C3%B3n%20Infonavit" target="_blank" class="block text-center bg-slate-800 group-hover:bg-red-600 text-slate-200 group-hover:text-white font-semibold py-3 rounded-xl border border-slate-700 transition text-sm">
+                    <a href="#cuestionario" class="block text-center bg-slate-800 group-hover:bg-red-600 text-slate-200 group-hover:text-white font-semibold py-3 rounded-xl border border-slate-700 transition text-sm">
                         Precalificar mi Infonavit
                     </a>
                 </div>
@@ -193,21 +239,19 @@
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Crédito Fovissste</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Orientación especializada para trabajadores del Estado. Tramitamos distintas modalidades:
-                        </p>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Orientación especializada para trabajadores del Estado:</p>
                         <ul class="text-sm text-slate-300 space-y-2 mb-6">
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-400 mt-1 text-xs"></i> <span><strong>Tradicional / Inscripción Continua:</strong> Ejercicio directo de tu fondo.</span></li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-400 mt-1 text-xs"></i> <span><strong>Fovissste para Todos:</strong> Potenciado con banca comercial con descuento por nómina.</span></li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-400 mt-1 text-xs"></i> <span><strong>Conyugal Fovissste-Infonavit:</strong> Une créditos si tu pareja cotiza en Infonavit.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-400 mt-1 text-xs"></i> <span><strong>Tradicional / Inscripción Continua:</strong> Ejercicio directo.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-400 mt-1 text-xs"></i> <span><strong>Fovissste para Todos:</strong> Potenciado con banca.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-400 mt-1 text-xs"></i> <span><strong>Conyugal Fovissste-Infonavit:</strong> Crédito mixto.</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5217717011984?text=Hola,%20necesito%20asesor%C3%ADa%20para%20tramitar%20mi%20cr%C3%A9dito%20Fovissste" target="_blank" class="block text-center bg-slate-800 group-hover:bg-blue-600 text-slate-200 group-hover:text-white font-semibold py-3 rounded-xl border border-slate-700 transition text-sm">
+                    <a href="#cuestionario" class="block text-center bg-slate-800 group-hover:bg-blue-600 text-slate-200 group-hover:text-white font-semibold py-3 rounded-xl border border-slate-700 transition text-sm">
                         Consultar Fovissste
                     </a>
                 </div>
 
-                <!-- Tarjeta Bancario y Cofinavit -->
+                <!-- Tarjeta Bancario -->
                 <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl flex flex-col justify-between hover:border-emerald-500/50 transition group">
                     <div>
                         <div class="h-16 flex items-center mb-6">
@@ -217,16 +261,14 @@
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Bancario & Cofinavit</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Comparamos las opciones con las principales instituciones financieras (BBVA, Banorte, Scotiabank, HSBC):
-                        </p>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Comparamos opciones con las principales bancas (BBVA, Banorte, HSBC):</p>
                         <ul class="text-sm text-slate-300 space-y-2 mb-6">
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span><strong>Cofinavit:</strong> Combina crédito bancario + saldo Subcuenta Infonavit.</span></li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span><strong>Hipotecario Tradicional:</strong> Tasa fija y mensualidades estructuradas a tu medida.</span></li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span><strong>Apoyo Infonavit:</strong> Usa aportaciones patronales futuras para amortizar capital.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span><strong>Cofinavit:</strong> Bancario + Subcuenta Infonavit.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span><strong>Hipotecario Tradicional:</strong> Mensualidades a tu medida.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span><strong>Apoyo Infonavit:</strong> Amortización directa.</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5217717011984?text=Hola,%20me%20gustar%C3%ADa%20comparar%20opciones%20de%20cr%C3%A9dito%20hipotecario%20bancario" target="_blank" class="block text-center bg-slate-800 group-hover:bg-emerald-600 text-slate-200 group-hover:text-white font-semibold py-3 rounded-xl border border-slate-700 transition text-sm">
+                    <a href="#cuestionario" class="block text-center bg-slate-800 group-hover:bg-emerald-600 text-slate-200 group-hover:text-white font-semibold py-3 rounded-xl border border-slate-700 transition text-sm">
                         Simular Crédito Bancario
                     </a>
                 </div>
@@ -271,10 +313,10 @@
     </section>
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/5217717011984?text=Hola,%20quisiera%20recibir%20asesor%C3%ADa%20inmobiliaria" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 flex items-center justify-center group" title="Contactar por WhatsApp">
+    <a href="#cuestionario" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 flex items-center justify-center group" title="Precalificar por WhatsApp">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
         <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-slate-950 font-bold text-xs group-hover:px-2">
-            Atención por WhatsApp
+            Precalificar por WhatsApp
         </span>
     </a>
 
@@ -285,6 +327,32 @@
             <p class="text-xs text-slate-600">Imágenes con fines ilustrativos. Disponibilidad sujeta a cambios por parte de los desarrolladores.</p>
         </div>
     </footer>
+
+    <!-- Script de Integración: Captura datos -> Envía a WhatsApp -> Redirecciona a Gracias.html -->
+    <script>
+        function enviarWhatsAppYGracias(event) {
+            event.preventDefault();
+            
+            var nombre = document.getElementById('nombre').value;
+            var credito = document.getElementById('credito').value;
+            var zona = document.getElementById('zona').value;
+            var tiempo = document.getElementById('tiempo').value;
+
+            var mensaje = "Hola, completé mi cuestionario de precalificación en la web:%0A" +
+                          "*Nombre:* " + encodeURIComponent(nombre) + "%0A" +
+                          "*Tipo de Crédito:* " + encodeURIComponent(credito) + "%0A" +
+                          "*Municipio de Interés:* " + encodeURIComponent(zona) + "%0A" +
+                          "*Tiempo de Compra:* " + encodeURIComponent(tiempo);
+
+            var whatsappUrl = "https://wa.me/5217717011984?text=" + mensaje;
+
+            // Abre WhatsApp en nueva pestaña con la información lista
+            window.open(whatsappUrl, '_blank');
+
+            // Redirecciona la pestaña actual a gracias.html para activar la medición de Google Analytics
+            window.location.href = "gracias.html";
+        }
+    </script>
 
 </body>
 </html>
